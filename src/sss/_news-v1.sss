@@ -1,4 +1,4 @@
-.news-v1
+.news-col-2
 	.news
 
 		&__list
@@ -36,7 +36,14 @@
 				// 	background: var(--main-color)
 
 			.date
-				margin-top: 25px
+				&:first-child
+					margin-bottom: 15px
+
+				&:not(:first-child)
+					margin-top: 25px
+
+			.btn
+				margin-top: 15px
 
 
 
@@ -63,6 +70,7 @@
 					padding: 4px 13px
 					color: #000
 					margin-top: 25px
+
 
 					&.date--orange
 						background-color: #ee9859

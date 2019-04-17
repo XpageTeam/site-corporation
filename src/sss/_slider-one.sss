@@ -258,8 +258,8 @@
 					border: 1px solid var(--main-color)
 
 				label, .reset-filter
-					padding: 5px 15px !important
-					display: inline-block
+					padding: 10px 15px !important
+					display: block
 
 					&:before
 						display: none !important
@@ -275,6 +275,57 @@
 			.slick
 				&-list
 					margin: 0
+
+	.slider-nav
+		&__item 
+			flex: none
+			background: #fff
+			margin: 0 !important
+
+			// &:focus-within
+
+			// 	background: #000
+
+
+			&.js__active
+				order: -1
+
+		&__link
+			width: 100%
+
+		&__list
+			position: relative
+			border: 1px solid var(--border-color)
+			height: 47px
+			flex-direction: column
+			flex-wrap: nowrap !important
+			overflow: hidden
+			background: #fff
+			z-index: 10
+
+
+
+			.btn
+				border-radius: 0
+				padding: 15px 23px
+
+				&.js__active
+					order: -1
+
+
+
+			&.js__open
+				overflow: visible
+
+				.slider-nav__item
+					opacity: 1
+					background: #fff
+					z-index: 10
+
+
+				&.js__active
+					order: -1
+					opacity: 1
 
 @media screen and (max-width: 667px)
 
@@ -292,28 +343,6 @@
 			border-radius: 0
 			padding: 10px 15px
 
-		&__list
-			// display: block
-			border: 1px solid var(--border-color)
-			height: 37px
-
-			&.js__open
-				.slider-nav__item
-					opacity: 1
-					pointer-events: all
-					background: #fff
-					z-index: 10
-
-
-			> *
-				width: 100%
-				opacity: 0
-				pointer-events: none
-
-				&.js__active
-					order: -1
-					opacity: 1
-					pointer-events: all
 
 		&__item
 			margin: 0 !important
@@ -335,3 +364,10 @@
 
 			&__info__text 
 				margin-bottom: 17px
+
+		.slider-block__slide-img
+			width: 100%
+			margin: 0 0 20px 0
+
+			img 
+				width: 100%

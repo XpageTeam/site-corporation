@@ -56,13 +56,23 @@
 .tel
 	&-selects
 		position: relative
-		
 		display: flex 
 		flex-direction: column
 		transition: opacity .3s ease
 		padding: 20px 0
 		border: 1px solid var(--border-color)
 		background: #fff
+		max-height: 145px
+		overflow: auto
+
+		&::-webkit-scrollbar 
+			width: 8px
+
+			&-track 
+				background: var(--second-color)
+
+			&-thumb 
+				background: var(--main-color)
 
 		a 
 			padding: 10px 50px 5px 70px

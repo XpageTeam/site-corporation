@@ -120,12 +120,24 @@
 
 @media screen and (max-width: 660px)
 
-	.footer-el
+	.footer
+		padding: 22px 0 20px
+
+		&-el
+
+			&:last-child
+				align-items: flex-start
+
+			&--right
+				margin-left: 0
+				margin-top: 0
+
+
+	.dev
 		flex-direction: column
+		margin-left: 10px
+		align-items: flex-start
 
-		&:last-child
-			align-items: flex-start
-
-		&--right
+		&__img
 			margin-left: 0
-			margin-top: 1.4rem
+			margin-top: 10px

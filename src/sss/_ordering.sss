@@ -102,6 +102,7 @@
 		border-radius: 50%
 		size: width("../img/ico-!.png") height("../img/ico-!.png")
 		background: url("../img/ico-!.png") no-repeat
+		display: none
 
 		&:not(:first-child)
 			margin-left: 18px
@@ -301,6 +302,7 @@
 	.order-data__item:not(:first-child)
 		margin: 0.75rem 0 0
 
+
 	.od-person__form
 		display: flex 
 		flex-direction: column
@@ -312,10 +314,18 @@
 			&--textarea
 				order: 1
 
-	.od-deliv__inputs
+	.od-deliv
+		&__inputs
 
-		.forms__input-cont
+			.forms__input-cont
+				width: 100%
+
+
+
+		&__methods-item
 			width: 100%
-
+			
+			&:not(:last-child)
+				margin-right: 0
 
 

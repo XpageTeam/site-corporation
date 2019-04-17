@@ -26,19 +26,18 @@ html(lang="ru")
 								h1 Новости
 
 				.wrapper
-					.news__cont
-						.news-v7
-							.news__list
-								- for (var i = 0; i < 9; i++)
-									a(href="#").news__item
-										.news__item-info
-											.date.date--orange до 01.06.2018
-											.news__item-info-title  Специальное предложение на оконные системы
-											.news__item-info-dop Бухгалтерский баланс — одна из основных форм ...
-											.btn Читать
+					.news-col-4
+						.news__list
+							- for (var i = 0; i < 9; i++)
+								a(href="#").news__item
+									.news__item-info
+										.date.date--orange до 01.06.2018
+										.news__item-info-title  Специальное предложение на оконные системы
+										.news__item-info-dop Бухгалтерский баланс — одна из основных форм ...
+										.btn Читать
 
 
-							include inc/paginator.pug
+						include inc/paginator.pug
 
 
 

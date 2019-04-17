@@ -1,4 +1,6 @@
 .main-slider
+
+
 	&__cont
 		position: relative
 		color: #fff
@@ -140,13 +142,12 @@
 				border: 0
 				background: #fff
 
-		&-slide
+	&__slide:not(:first-child)
+		display: none !important
 
-			&:not(:first-child)
-				display: none !important
 
 	&.slick-initialized
-		.slick-slide
+		.main-slider__slide
 			display: block !important
 
 @media screen and (max-width: 1300px)

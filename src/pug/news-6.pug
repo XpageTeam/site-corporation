@@ -26,21 +26,20 @@ html(lang="ru")
 								h1 Новости
 
 				.wrapper
-					.news__cont
-						.news-v6
-							.news__list
-								- for (var i = 0; i < 9; i++)
-									a(href="#").news__item
-										figure.news__item-img
-											img(src="img/photos/stoke-v6.jpg")
-										.news__item-info
-											.news__item-info-title  Специальное предложение на оконные системы
-											.news__item-info-dop Только с 19 апреля по 02 мая 2018 г. в розничных магазинах NAME COMPANY акция<br> 3=2 на детскую коллекцию! Условия Новости: при покупке двух вещей<br> для детей - третья ...
-											.date.date--orange до 01.06.2018
-											.news__item-info-btn
+					.news-col-1
+						.news__list
+							- for (var i = 0; i < 9; i++)
+								a(href="#").news__item
+									figure.news__item-img
+										img(src="img/photos/stoke-v6.jpg")
+									.news__item-info
+										.news__item-info-title  Специальное предложение на оконные системы
+										.news__item-info-dop Только с 19 апреля по 02 мая 2018 г. в розничных магазинах NAME COMPANY акция<br> 3=2 на детскую коллекцию! Условия Новости: при покупке двух вещей<br> для детей - третья ...
+										.date.date--orange до 01.06.2018
+										.news__item-info-btn
 
 
-							include inc/paginator.pug
+						include inc/paginator.pug
 
 
 

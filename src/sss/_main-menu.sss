@@ -103,6 +103,8 @@
 	overflow-x: hidden
 	display: none
 	border-left: 1px solid var(--border-color)
+	z-index: 0
+	overflow-y: auto
 
 	.soc
 		padding: 15px 
@@ -247,12 +249,34 @@
 	transition: transform .3s ease
 
 .js__menu--open
+	position: fixed
+	width: 100%
+
 	#page-wr
 		transform: translateX(-250px)
 
 .js__submenu--open
 	.mobile-menu .nav__item ul
 		transform: translateX(0)
+
+@media screen and (min-width: 1000px)
+	.nav__item 
+		ul
+			max-height: 170px
+			overflow: auto
+
+			&::-webkit-scrollbar 
+				width: 8px
+
+
+				&-track 
+					background: var(--second-color)
+
+
+				&-thumb 
+					background: var(--main-color)
+
+
 
 @media screen and (max-width: 1200px)
 	.mobile-menu

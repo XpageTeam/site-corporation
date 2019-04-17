@@ -36,6 +36,16 @@ require("jquery-ui/themes/base/slider.css");
 
 document.addEventListener("DOMContentLoaded", e => {
 
+	$("body").click(function(e){
+		if (!$(e.target).is($(".mobile-menu"))
+			&& !$(".mobile-menu").has(e.target).length
+			&& $("body").hasClass("js__menu--open")
+			&& !$(e.target).is($(".burger"))
+			&& !$(".burger").has(e.target).length){
+				$("body").removeClass("js__menu--open")
+		}
+	})
+
 	$('.burger').click(function(){
 		$('body').toggleClass('js__menu--open');
 	})
@@ -120,16 +130,24 @@ document.addEventListener("DOMContentLoaded", e => {
 	})
 
 
-	$('.slider-nav__link input[type="radio"]').on('change', function(){
+	$('.slider-one .slider-nav__link input[type="radio"]').on('change', function(){
 		let value = $(this).val();
 
 		$sliderOne.slick('slickUnfilter');
-		$sliderRowTwo.slick('slickUnfilter');
+
 		$sliderOne.slick('slickFilter', function(id, slide){
 			let $slide = $(slide);
 			return +$slide.find("[data-id]").data("id") == value;
 			filtered = false;
 		})
+
+	})
+
+	$('.slider-row-two .slider-nav__link input[type="radio"]').on('change', function(){
+		let value = $(this).val();
+
+		$sliderRowTwo.slick('slickUnfilter');
+
 
 		$sliderRowTwo.slick('slickFilter', function(id, slide){
 			let $slide = $(slide);
@@ -428,37 +446,9 @@ document.addEventListener("DOMContentLoaded", e => {
 	})
 
 
-	if($(window).width() < 667){
-
-		$('.slider-nav').find('.btn').addClass('js__active');
-
-
-		$('.slider-nav__list').click(function(){
-			let $this = $(this);
-
-			if($this.hasClass('js__open')){
-				$this.removeClass('js__open')
-			} else {
-				$this.addClass('js__open')
-			}
-		})
-
-		$('.slider-nav__list > *').click(function(){
-			let $this = $(this);
-
-			if($this.hasClass('js__active')){
-				$this.removeClass('js__active')
-			} else {
-				$this.addClass('js__active')
-			}
 
 
 
-
-
-
-		})
-	}
 
 
 	var menuClone = $('.nav__list').clone();
@@ -604,32 +594,31 @@ document.addEventListener("DOMContentLoaded", e => {
 
 
 
+		// $('.slider-nav').find('.btn').addClass('js__active');
 
 
+		// if(!$('.slider-nav__list').hasClass('js__open')){
+
+		// 	if($(window).width() < 1000){
+		// 		$('.slider-nav__list').click(function(){
+		// 				var $this = $(this);
+		// 				$this.closest('.slider-nav__list').toggleClass('js__open');
+		// 		})
+		// 	}
+		// }
 
 
+		// $('.slider-nav__list > *').click(function(){
 
+		// 	if($(window).width() < 1000){
 
+		// 		var $this = $(this);
 
+		// 		$('.slider-nav__item').removeClass('js__active');
+		// 		$this.addClass('js__active');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		// 	}
+		// })
 
 
 
