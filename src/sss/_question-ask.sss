@@ -1,0 +1,43 @@
+.question-ask
+	display: flex
+	justify-content: space-between
+
+	&__cont
+		background: var(--second-color)
+		padding: 80px 0
+		margin-bottom: -72px
+		margin-top: 75px
+
+	.forms
+		max-width: 720px
+		background: #fff
+
+	.question
+		max-width: 400px
+		background: #fff
+		border: 0
+
+@media screen and (max-width: 1500px)
+
+	.question-ask__cont
+		padding: 50px 0
+		margin-top: 50px
+
+@media screen and (max-width: 1200px)
+	
+	.question-ask
+		flex-direction: column
+
+		.forms
+			max-width: 100%
+
+		.question
+			max-width: 100%
+			width: 100%
+			margin-top: 1.4rem
+
+@media screen and (max-width: 1000px)
+
+	.question-ask__cont
+		padding: 35px 0
+		margin-top: 35px

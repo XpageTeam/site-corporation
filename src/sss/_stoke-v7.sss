@@ -1,0 +1,152 @@
+.stoke-v7
+	.stoke
+
+		&__list
+			display: flex
+			flex-wrap: wrap
+			margin: 0 0 -30px -30px
+
+		&__btn
+			display: flex
+			justify-content: center
+			margin-top: 53px
+
+		.slick
+			&-list
+				margin: 0 -15px
+
+			&-track
+				display: flex
+
+		&__item
+			display: flex !important
+			text-decoration: none
+			color: #000
+			transition: box-shadow .5s ease
+			border: 1px solid #f6f7fa
+			width: calc((100% - 30px * 4) / 4)
+			margin: 0 0 30px 30px
+
+			&:hover
+				box-shadow: 0px 0px 51.33px 7.67px rgba(37, 41, 77, 0.05)
+
+			.date
+				margin-bottom: 15px
+
+			.btn
+				margin-top: auto
+
+
+
+			&-img
+				position: relative
+				margin: 0 !important
+				flex: none
+
+				img
+					display: block
+
+			&-info
+				position: relative
+				display: flex
+				flex-direction: column
+				flex: 1 1 auto
+				padding: 27px 33px
+				align-items: flex-start
+
+				&-date
+					font-size: 12px
+					border-radius: 13px
+					background-color: var(--second-color)
+					padding: 4px 13px
+					color: #000
+					margin-top: 25px
+
+					&.date--orange
+						background-color: #ee9859
+						color: #fff
+
+
+
+
+
+				&-title
+					font-size: rem(18)
+					margin-bottom: 13px
+
+				&-dop
+					color: #bdc2cf
+					font-size: rem(14)
+					margin-bottom: 15px
+
+				&-price
+					font-size: rem(24)
+					margin-top: 21px
+
+					&--sale
+						position: relative
+						font-size: rem(14)
+						color: #b7b7b7
+						margin-top: 5px
+						padding-left: 5px
+						display: flex
+						justify-content: flex-start
+
+						&:before
+							content: ''
+							position: absolute
+							display: block
+							top: 50%
+							left: 0
+							width: 100%
+							height: 1px
+							background: #b7b7b7
+
+				&-btn
+					display: block
+					right: 30px
+					bottom: 30px
+					size: 43px
+					border-radius: 50%
+					background: url('../img/ico-arrow.png') no-repeat center, #f8f9fb
+					position: absolute
+					right: 1.4rem
+					bottom: 1.4rem
+
+
+@media screen and (max-width: 1000px)
+
+	.stoke-v7
+		.stoke
+			&__item
+				width: calc((100% - 30px * 3) / 3)
+
+				&-info
+					padding: 20px
+
+				&-img
+					max-width: 270px
+
+				.date
+					margin-top: 0
+
+
+@media screen and (max-width: 667px)
+
+	.stoke-v7
+		.stoke
+
+			&__list
+				margin: 0 0 -30px 0
+				
+
+			&__item
+				width: 100%
+				margin: 0 0 30px 0
+				flex-direction: column
+
+				&-img
+					max-width: 100%
+
+				img 
+					width: 100%

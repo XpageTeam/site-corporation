@@ -1,0 +1,131 @@
+.footer
+	font-size: rem(14)
+	padding: 72px 0
+	background-color: #f4f6f9
+	border-top: 1px solid var(--border-color)
+
+
+	&-cont
+		display: flex
+		flex-direction: column
+
+
+
+	&-el
+		display: flex
+		justify-content: space-between
+
+		&:not(:first-child)
+			margin-top: 14px
+
+		&--right
+			margin-left: auto
+
+		&:last-child
+			display: flex
+			align-items: flex-end
+
+
+
+	&-menu
+		display: flex
+		margin-bottom: auto
+		font-size: rem(16)
+
+		&__link
+			padding: 10px 30px
+
+		&__item
+
+			&:last-child
+				.footer-menu__link
+					padding-right: 0
+
+			&.active
+				a
+					color: var(--main-color)
+
+	.btn
+		font-size: rem(16)
+
+	&-phone
+		position: relative
+		margin-top: 15px
+		display: flex
+		align-self: flex-end
+		cursor: pointer
+
+		&:hover
+			.tel-selects-wr
+				opacity: 1
+				pointer-events: all
+
+
+	.tel-selected
+		font-size: rem(21)
+		font-weight: 600
+
+		a
+			padding: 0
+
+			&:after
+				border-color: #000
+
+	.tel-selects-wr
+		left: inherit
+		right: -23px
+
+
+	.email
+		a
+			color: var(--main-color)
+			text-decoration: underline
+
+	&-select
+		margin-left: -8px
+
+.politics
+	color: var(--main-color)
+.dev
+	display: flex
+	align-items: center
+	color: #c1c4cb
+	font-size: rem(14)
+
+	&__img
+		background: #e4e8f0
+		padding: 5px 10px
+		border-radius: 5px
+		margin-left: 21px
+
+		img
+			display: block
+
+
+@media screen and (max-width: 1200px)
+
+	.footer
+		padding: 40px 0
+
+		&-phone
+			display: none
+
+		&-el
+			margin-top: 0 !important
+			&:not(:last-child)
+				display: none
+
+
+
+
+@media screen and (max-width: 660px)
+
+	.footer-el
+		flex-direction: column
+
+		&:last-child
+			align-items: flex-start
+
+		&--right
+			margin-left: 0
+			margin-top: 1.4rem

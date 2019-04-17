@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Контакты v2
+		include inc/head.pug
+		include inc/css.pug
+	body.inner
+		.mobile-menu
+		#page-wr
+			include inc/header.pug
+			#content
+
+				.cart-cont
+					a(href="#").cart-small-cont
+						.cart-small(data-count="2")
+
+				.title-block__cont
+					.wrapper
+						.title-block
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#" title="Главная") Главная
+									span.bread-crumbs__this(href="#") Контакты
+							.title-block__title
+								h1 Контакты
+
+				.wrapper
+					.contacts__cont
+						.contacts-v2
+							.contacts
+								.contacts-top
+									a(href="#").btn Написать нам
+								.contacts-bot
+									.contacts-list
+										.contacts-item.ico-location
+											.contacts-item__label Адрес
+											.contacts-item__info 454136, г. Челябинск<br> ул. Молодогвардейцев, 31
+											a(href="#") Показать на карте
+										.contacts-item.ico-phone
+											.contacts-item__label Телефон
+											.contacts-item__info 
+												a(href="#") 8(900) 000-00-00
+										.contacts-item.ico-email
+											.contacts-item__label Е-mail
+											.contacts-item__info
+												a(href="#") email@email.ru
+										.contacts-item.ico-clock
+											.contacts-item__label Режим работы
+											.contacts-item__info 8:00 - 20:00
+									.contacts-list
+										.contacts-item.ico-location
+											.contacts-item__label Адрес
+											.contacts-item__info 454136, г. Челябинск<br> ул. Молодогвардейцев, 31
+											a(href="#") Показать на карте
+										.contacts-item.ico-phone
+											.contacts-item__label Телефон
+											.contacts-item__info 
+												a(href="#") 8(900) 000-00-00
+										.contacts-item.ico-email
+											.contacts-item__label Е-mail
+											.contacts-item__info
+												a(href="#") email@email.ru
+										.contacts-item.ico-clock
+											.contacts-item__label Режим работы
+											.contacts-item__info 8:00 - 20:00
+									
+
+				.contacts-map--full
+					.map
+						img(src="img/map-2.jpg", alt="")
+							
+
+
+							
+
+
+
+
+
+			include inc/footer.pug
+		include inc/scripts.pug

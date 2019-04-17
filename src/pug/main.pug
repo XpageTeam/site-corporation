@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Главная v1
+		include inc/head.pug
+		include inc/css.pug
+	body.main
+		.mobile-menu
+		#page-wr
+			include inc/header.pug
+			#content
+					
+				.main-slider__cont
+					.main-slider-arrow
+						.wrapper
+
+					.main-slider
+						- for (var i = 0; i < 2; i++)
+							.main-slider__slide
+								picture
+									source(srcset="img/photos/new-main-slider-img-4.jpg" media="screen and (min-width: 1000px)" data-main="data-main")
+									source(srcset="img/photos/new-main-slider-img-4-1.jpg" media="screen and (min-width: 660px)")
+									source(srcset="img/photos/new-main-slider-img-4-2.jpg" media="screen and (min-width: 320px)")
+									img
+								.main-slider__slide-title-cont
+									.wrapper
+										.slider-info
+											.main-slider__slide-title Профессиональные<br> строители
+											.main-slider__slide-subtitle Всё готово для быстрого запуска<br> вашего корпоративного сайта
+											.main-slider__slide-btn
+												a.btn(href="#") Заказать
+												a.btn(href="#") Узнать больше 
+
+				.slider.slider-one
+					.wrapper
+						.slider-cont
+							.title 
+								span Наши услуги 
+								.slider-arrow
+							.slider-wr
+								.slider-nav
+									ul.slider-nav__list
+										li.slider-nav__item
+											.slider-nav__link
+												input(type="radio" name="filter" id='1' value="1")
+												label(for="1") Ремонт помещения
+										li.slider-nav__item
+											.slider-nav__link 
+												input(type="radio" name="filter" id='2' value="2")
+												label(for="2") Отделочные работы
+										li.slider-nav__item
+											.slider-nav__link 
+												input(type="radio" name="filter" id='3' value="3")
+												label(for="3") Проектирование зданий
+										li.slider-nav__item
+											.slider-nav__link 
+												input(type="radio" name="filter" id='4' value="4")
+												label(for="4") Строительство зданий
+										li.slider-nav__item
+											.slider-nav__link 
+												.reset-filter Сбросить фильтр
+										.btn Все услуги
+										
+								.slider-block__cont
+									.slider-block
+										.slider-block__slide(data-id="1")
+											figure.slider-block__slide-img
+												img(src="img/photos/slide-"+(i+1)+".jpg", alt="")
+											.slider-block__info
+												.slider-block__info__title Ремонт помещения 1
+												.slider-block__info__text Ремонт жилых и нежилых помещений выполняется нами с целью улучшения их внешнего вида, организации пространства, удобного для работы, создания имиджа компании, повышения ее статуса. Оказываемые нами услуги по ремонту помещений популярны среди владельцев офисов, а также жилых домов. Они позволяют устранить небольшие шероховатости, оставшиеся после ремонта зданий, придать объектам завершенный вид, улучшить их дизайн. Если вы желаете сделать свой дом современным и красивым, наши мастера помогут вам это сделать.
+												a(href="#").btn Подробнее
+										.slider-block__slide(data-id="2")
+											figure.slider-block__slide-img
+												img(src="img/photos/slide-1.jpg", alt="")
+											.slider-block__info
+												.slider-block__info__title Ремонт помещения 2
+												.slider-block__info__text Ремонт жилых и нежилых помещений выполняется нами с целью улучшения их внешнего вида, организации пространства, удобного для работы, создания имиджа компании, повышения ее статуса. Оказываемые нами услуги по ремонту помещений популярны среди владельцев офисов, а также жилых домов. Они позволяют устранить небольшие шероховатости, оставшиеся после ремонта зданий, придать объектам завершенный вид, улучшить их дизайн. Если вы желаете сделать свой дом современным и красивым, наши мастера помогут вам это сделать.
+												a(href="#").btn Подробнее
+										.slider-block__slide(data-id="1")
+											figure.slider-block__slide-img
+												img(src="img/photos/slide-1.jpg", alt="")
+											.slider-block__info
+												.slider-block__info__title Ремонт помещения 1
+												.slider-block__info__text Ремонт жилых и нежилых помещений выполняется нами с целью улучшения их внешнего вида, организации пространства, удобного для работы, создания имиджа компании, повышения ее статуса. Оказываемые нами услуги по ремонту помещений популярны среди владельцев офисов, а также жилых домов. Они позволяют устранить небольшие шероховатости, оставшиеся после ремонта зданий, придать объектам завершенный вид, улучшить их дизайн. Если вы желаете сделать свой дом современным и красивым, наши мастера помогут вам это сделать.
+												a(href="#").btn Подробнее
+										.slider-block__slide(data-id="3")
+											figure.slider-block__slide-img
+												img(src="img/photos/slide-1.jpg", alt="")
+											.slider-block__info
+												.slider-block__info__title Ремонт помещения 3
+												.slider-block__info__text Ремонт жилых и нежилых помещений выполняется нами с целью улучшения их внешнего вида, организации пространства, удобного для работы, создания имиджа компании, повышения ее статуса. Оказываемые нами услуги по ремонту помещений популярны среди владельцев офисов, а также жилых домов. Они позволяют устранить небольшие шероховатости, оставшиеся после ремонта зданий, придать объектам завершенный вид, улучшить их дизайн. Если вы желаете сделать свой дом современным и красивым, наши мастера помогут вам это сделать.
+												a(href="#").btn Подробнее
+										.slider-block__slide(data-id="4")
+											figure.slider-block__slide-img
+												img(src="img/photos/slide-1.jpg", alt="")
+											.slider-block__info
+												.slider-block__info__title Ремонт помещения 4
+												.slider-block__info__text Ремонт жилых и нежилых помещений выполняется нами с целью улучшения их внешнего вида, организации пространства, удобного для работы, создания имиджа компании, повышения ее статуса. Оказываемые нами услуги по ремонту помещений популярны среди владельцев офисов, а также жилых домов. Они позволяют устранить небольшие шероховатости, оставшиеся после ремонта зданий, придать объектам завершенный вид, улучшить их дизайн. Если вы желаете сделать свой дом современным и красивым, наши мастера помогут вам это сделать.
+												a(href="#").btn Подробнее
+										.slider-block__slide(data-id="4")
+											figure.slider-block__slide-img
+												img(src="img/photos/slide-1.jpg", alt="")
+											.slider-block__info
+												.slider-block__info__title Ремонт помещения 4
+												.slider-block__info__text Ремонт жилых и нежилых помещений выполняется нами с целью улучшения их внешнего вида, организации пространства, удобного для работы, создания имиджа компании, повышения ее статуса. Оказываемые нами услуги по ремонту помещений популярны среди владельцев офисов, а также жилых домов. Они позволяют устранить небольшие шероховатости, оставшиеся после ремонта зданий, придать объектам завершенный вид, улучшить их дизайн. Если вы желаете сделать свой дом современным и красивым, наши мастера помогут вам это сделать.
+												a(href="#").btn Подробнее
+										
+													
+				.slider.slider-row-two
+					.wrapper
+						.slider-cont
+							.title 
+								span Наши товары
+								.slider-arrow
+							.slider-wr
+								.slider-nav
+									ul.slider-nav__list
+										li.slider-nav__item(id="tab1")
+											.slider-nav__link
+												input(type="radio" name="filter1" id='5' value="1")
+												label(for="5") Каркасные дома
+										li.slider-nav__item
+											.slider-nav__link 
+												input(type="radio" name="filter1" id='6' value="1")
+												label(for="6") Дома из пеноблоков
+										li.slider-nav__item
+											.slider-nav__link 
+												input(type="radio" name="filter1" id='7' value="1")
+												label(for="7") Беседки
+										li.slider-nav__item
+											.slider-nav__link 
+												input(type="radio" name="filter1" id='8' value="1")
+												label(for="8") Бани
+										li.slider-nav__item
+											.slider-nav__link 
+												.reset-filter Сбросить фильтр
+												
+										.btn Перейти в каталог
+
+								.slider-block__cont
+
+									.slider-block
+										a(href="#").slider-block__item(data-id="1")
+											figure.slider-block__item-img
+												img(src="img/photos/img-slide-1.jpg")
+												.ico-sale Sale
+											.slider-block__item-info 
+												.slider-block__info-title ЖК «Подсолнухи» 1
+												.slider-block__info-dop Кресло, Гранн, Бумстад белый/дерево
+												.slider-block__info-price 23 700 Р
+												.slider-block__info-price--sale 23 700 Р
+												.slider-block__info-btn
+										a(href="#").slider-block__item(data-id="1")
+											figure.slider-block__item-img
+												img(src="img/photos/img-slide-1.jpg")
+												.ico-sale Sale
+											.slider-block__item-info 
+												.slider-block__info-title ЖК «Подсолнухи» 2
+												.slider-block__info-dop Кресло, Гранн, Бумстад белый/дерево
+												.slider-block__info-price 23 700 Р
+												.slider-block__info-price--sale 23 700 Р
+												.slider-block__info-btn
+
+										a(href="#").slider-block__item(data-id="2")
+											figure.slider-block__item-img
+												img(src="img/photos/img-slide-1.jpg")
+												.ico-sale Sale
+											.slider-block__item-info 
+												.slider-block__info-title ЖК «Подсолнухи» 3
+												.slider-block__info-dop Кресло, Гранн, Бумстад белый/дерево
+												.slider-block__info-price 23 700 Р
+												.slider-block__info-price--sale 23 700 Р
+												.slider-block__info-btn
+										a(href="#").slider-block__item(data-id="2")
+											figure.slider-block__item-img
+												img(src="img/photos/img-slide-1.jpg")
+												.ico-sale Sale
+											.slider-block__item-info 
+												.slider-block__info-title ЖК «Подсолнухи» 4
+												.slider-block__info-dop Кресло, Гранн, Бумстад белый/дерево
+												.slider-block__info-price 23 700 Р
+												.slider-block__info-price--sale 23 700 Р
+												.slider-block__info-btn
+										- for (var i = 0; i < 14; i++)
+											a(href="#").slider-block__item(data-id="1")
+												figure.slider-block__item-img
+													img(src="img/photos/img-slide-1.jpg")
+													.ico-sale Sale
+												.slider-block__item-info 
+													.slider-block__info-title ЖК «Подсолнухи»
+													.slider-block__info-dop Кресло, Гранн, Бумстад белый/дерево
+													.slider-block__info-price 23 700 Р
+													.slider-block__info-price--sale 23 700 Р
+													.slider-block__info-btn
+
+													
+									.slider-block__btn
+										a(href="#").btn Все товары
+
+				.about
+					.wrapper 
+						.about-cont
+							.about-info
+								.about-info__title.title 
+									span О компании
+								.about-info__text.text-page 
+									p В 2010 году на рынке деревянного домостроения Московского региона появилась новая, принципиально отличающаяся от других, компания.
+									p Ее создателями и впоследствии движущей силой стала команда профессионалов с 15-летним опытом работы. Глубокое знание сферы помогли компании совершить важный прорыв в области деревянного домостроения. Главной идеей стало строительство максимально качественных и недорогих домов.
+									p Благодаря такому подходу, всего за пять лет работы, компания стала мощной, узнаваемой и уважаемой в строительной сфере Москвы и области.
+							.about-imgs
+								.about-imgs__list
+									a(href="#").about-imgs__item
+										figure 
+											img(src="img/about-1.png")
+										.about-imgs__title Скидки
+									a(href="#").about-imgs__item
+										figure 
+											img(src="img/about-2.png")
+										.about-imgs__title Экологичность 
+									a(href="#").about-imgs__item
+										figure 
+											img(src="img/about-3.png")
+										.about-imgs__title Доставка
+									a(href="#").about-imgs__item
+										figure 
+											img(src="img/about-4.png")
+										.about-imgs__title Используемое оборудование
+
+				.slider.slider-four-photo
+					.wrapper
+						.slider-cont
+							.title 
+								span Фотогалерея
+								a(href="#").btn Смотреть все фото
+								.slider-arrow
+							.slider__block
+								.slider__block-list
+									a(href="#").slider__block-item
+										figure.slider__block-img
+											img(src="img/photos/img-slide-1-2.jpg")
+											.ico-info Каркасные дома
+										.slider__block-info
+											.slider-info-title Беседки
+											.slider-info-text Проектируем беседки по индивидуальным заказам и строим по готовым чертежам
+											.slider-block__info-btn
+									a(href="#").slider__block-item
+										figure.slider__block-img
+											img(src="img/photos/img-slide-1-3.jpg")
+											.ico-info Беседки
+
+										.slider__block-info
+											.slider-info-title Беседки
+											.slider-info-text Проектируем беседки по индивидуальным заказам и строим по готовым чертежам
+											.slider-block__info-btn
+									a(href="#").slider__block-item
+										figure.slider__block-img
+											img(src="img/photos/img-slide-1-3.jpg")
+											.ico-info Бани
+
+										.slider__block-info
+											.slider-info-title Беседки
+											.slider-info-text Проектируем беседки по индивидуальным заказам и строим по готовым чертежам
+											.slider-block__info-btn
+									a(href="#").slider__block-item
+										figure.slider__block-img
+											img(src="img/photos/img-slide-1-2.jpg")
+
+										.slider__block-info
+											.slider-info-title Беседки
+											.slider-info-text Проектируем беседки по индивидуальным заказам и строим по готовым чертежам
+											.slider-block__info-btn
+									a(href="#").slider__block-item
+										figure.slider__block-img
+											img(src="img/photos/img-slide-1-2.jpg")
+
+										.slider__block-info
+											.slider-info-title Беседки
+											.slider-info-text Проектируем беседки по индивидуальным заказам и строим по готовым чертежам
+											.slider-block__info-btn
+
+				.slider.slider-tovar
+					.wrapper
+						.slider-cont
+							.title 
+								span Наши товары
+								a(href="#").btn Перейти в каталог
+								.slider-arrow
+							.slider__block
+								.slider__block-list
+									a(href="#").slider-block__item
+										figure.slider-block__item-img
+											img(src="img/photos/img-slide-4-1.jpg")
+											.ico-sale Sale
+										.slider-block__item-info 
+											.slider-block__info-title Дом на озере Аргази
+											.slider-block__info-dop Кресло, Гранн, Бумстад белый/дерево
+											.slider-block__info-price 23 700 Р
+											.slider-block__info-price--sale 23 700 Р
+											.slider-block__info-btn.ico-cart
+									a(href="#").slider-block__item
+										figure.slider-block__item-img
+											img(src="img/photos/img-slide-4-1.jpg")
+											.ico-sale Sale
+										.slider-block__item-info 
+											.slider-block__info-title Дом на озере Аргази
+											.slider-block__info-dop Кресло, Гранн, Бумстад белый/дерево
+											.slider-block__info-price 23 700 Р
+											.slider-block__info-price--sale 23 700 Р
+											.slider-block__info-btn
+									a(href="#").slider-block__item
+										figure.slider-block__item-img
+											img(src="img/photos/img-slide-4-1.jpg")
+											.ico-sale Sale
+										.slider-block__item-info 
+											.slider-block__info-title Дом на озере Аргази
+											.slider-block__info-dop Кресло, Гранн, Бумстад белый/дерево
+											.slider-block__info-price 23 700 Р
+											.slider-block__info-price--sale 23 700 Р
+											.slider-block__info-btn.ico-cart
+									a(href="#").slider-block__item
+										figure.slider-block__item-img
+											img(src="img/photos/img-slide-4-1.jpg")
+											.ico-sale Sale
+										.slider-block__item-info 
+											.slider-block__info-title Дом на озере Аргази
+											.slider-block__info-dop Кресло, Гранн, Бумстад белый/дерево
+											.slider-block__info-price 23 700 Р
+											.slider-block__info-price--sale 23 700 Р
+											.slider-block__info-btn.ico-cart
+									a(href="#").slider-block__item
+										figure.slider-block__item-img
+											img(src="img/photos/img-slide-4-1.jpg")
+											.ico-sale Sale
+										.slider-block__item-info 
+											.slider-block__info-title Дом на озере Аргази
+											.slider-block__info-dop Кресло, Гранн, Бумстад белый/дерево
+											.slider-block__info-price 23 700 Р
+											.slider-block__info-price--sale 23 700 Р
+											.slider-block__info-btn.ico-cart
+
+				.slider.slider-two
+					.wrapper
+						.slider-cont
+							.title 
+								span Акции
+								a(href="#").btn Все акции
+								.slider-arrow
+							.slider__block
+								.slider__block-list
+									- for (var i = 0; i < 9; i++)
+										a(href="#").stoke__item
+											figure.stoke__item-img
+												img(src="img/photos/slider-two-img.jpg")
+												.ico-sale Sale
+											.stoke__item-info 
+												.stoke__item-info-title  Специальное предложение на оконные системы
+												.stoke__item-info-dop Бухгалтерский баланс — одна из основных форм бухгалтерской отчётности. В соответствии с...
+												.date.date--orange до 01.06.2018
+									
+				
+				.slider.slider-four-no-photo
+					.wrapper
+						.slider-cont
+							.title 
+								span Новости
+								a(href="#").btn Все новости
+								.slider-arrow
+							.slider__block
+								.slider__block-list
+									a(href="#").slider-block__item
+										.news__item
+											.news__item-title Молодые воронежские художники вернулись с наградами
+											.news__item-text Бухгалтерский баланс — одна из основных форм бухгалтерской отчётности. В соответствии с...
+											.news__item-data 01.06.2018
+										
+									a(href="#").slider-block__item
+										.news__item
+											.news__item-title Срыв контракта предполагает штрафные санкции
+											.news__item-text Бухгалтерский баланс — одна из основных форм бухгалтерской отчётности. В соответствии с...
+											.news__item-data 01.06.2018
+									a(href="#").slider-block__item
+										.news__item
+											.news__item-title Facebook в IV квартале увеличила прибыль в 8 раз
+											.news__item-text Бухгалтерский баланс — одна из основных форм бухгалтерской отчётности. В соответствии с...
+											.news__item-data 01.06.2018
+									a(href="#").slider-block__item
+										.news__item
+											.news__item-title Срыв контракта предполагает штрафные санкции
+											.news__item-text Бухгалтерский баланс — одна из основных форм бухгалтерской отчётности. В соответствии с...
+											.news__item-data 01.06.2018
+									a(href="#").slider-block__item
+										.news__item
+											.news__item-title Срыв контракта предполагает штрафные санкции
+											.news__item-text Бухгалтерский баланс — одна из основных форм бухгалтерской отчётности. В соответствии с...
+											.news__item-data 01.06.2018
+
+				.slider.slider-testemonials
+					.wrapper
+						.slider-cont
+							.title 
+								span Отзывы
+								a(href="#").btn Все отзывы
+								.slider-arrow
+							.slider__block
+								.slider__block-list
+									a(href="#").testemonials__item
+										.testemonials__item-top
+											.testemonials__item-photo
+												img(src="img/ico-avatar.svg")
+											div
+												.testemonials__item-title Константин Иванов
+
+												.testemonials__item-subtitle директор, ООО "Константа"
+											
+											.testemonials__item-date 08.05.2018
+
+										.testemonials__item-middle
+											.testemonials__item-text Уютный дом начинается с проекта. Мы занимаемся проектированием зданий с 1998 года и внедрили лучшие находки в наши типовые проекты коттеджей, таунхаусов, бань и беседок. Уютный дом начинается с проекта. Мы занимаемся проектированием зданий с 1998 года и внедрили лучшие находки в наши типовые проекты коттеджей, таунхаусов, бань и беседок...
+										.testemonials__item-files
+											.testemonials__item-file.ico-jpg
+												.file-name Photo 1 (снаружи дома)
+												.file-weight 17.6 Кб
+											.testemonials__item-file.ico-jpg
+												.file-name Photo 2 (изнутри дома)
+												.file-weight 17.6 Кб
+										.testemonials__item-btn
+											.testemonials-btn
+											.testemonials-file
+									a(href="#").testemonials__item
+										.testemonials__item-top
+											div
+												.testemonials__item-title Константин Иванов
+
+												.testemonials__item-subtitle директор, ООО "Константа"
+												
+											.testemonials__item-date 08.05.2018
+
+										.testemonials__item-middle
+											.testemonials__item-text Уютный дом начинается с проекта. Мы занимаемся проектированием зданий с 1998 года и внедрили лучшие находки в наши типовые проекты коттеджей, таунхаусов, бань и беседок. Уютный дом начинается с проекта. Мы занимаемся проектированием зданий с 1998 года и внедрили лучшие находки в наши типовые проекты коттеджей, таунхаусов, бань и беседок...
+										.testemonials__item-files
+											.testemonials__item-file.ico-jpg
+												.file-name Photo 1 (снаружи дома)
+												.file-weight 17.6 Кб
+											.testemonials__item-file.ico-jpg
+												.file-name Photo 2 (изнутри дома)
+												.file-weight 17.6 Кб
+										.testemonials__item-btn
+											.testemonials-btn
+											.testemonials-file
+									a(href="#").testemonials__item
+										.testemonials__item-top
+											div
+												.testemonials__item-title Константин Иванов
+
+												.testemonials__item-subtitle директор, ООО "Константа"
+											div 
+												.testemonials__item-date 08.05.2018
+
+										.testemonials__item-middle
+											.testemonials__item-text Уютный дом начинается с проекта. Мы занимаемся проектированием зданий с 1998 года и внедрили лучшие находки в наши типовые проекты коттеджей, таунхаусов, бань и беседок. Уютный дом начинается с проекта. Мы занимаемся проектированием зданий с 1998 года и внедрили лучшие находки в наши типовые проекты коттеджей, таунхаусов, бань и беседок...
+										.testemonials__item-files
+											.testemonials__item-file.ico-jpg
+												.file-name Photo 1 (снаружи дома)
+												.file-weight 17.6 Кб
+											.testemonials__item-file.ico-jpg
+												.file-name Photo 2 (изнутри дома)
+												.file-weight 17.6 Кб
+										.testemonials__item-btn
+											.testemonials-btn
+											.testemonials-file
+
+				.slider.slider-partners
+					.wrapper
+						.slider-cont
+							.title 
+								span Партнеры
+								.slider-arrow
+							.slider__block
+								.slider__block-list
+									a(href="#").partners__item
+										img(src="img/photos/partner-2.png")
+									a(href="#").partners__item
+										img(src="img/photos/partner-3.png")
+									a(href="#").partners__item
+										img(src="img/photos/partner-4.png")
+									a(href="#").partners__item
+										img(src="img/photos/partner-5.png")
+									a(href="#").partners__item
+										img(src="img/photos/partner-6.png")
+									a(href="#").partners__item
+										img(src="img/photos/partner-1.png")
+									a(href="#").partners__item
+										img(src="img/photos/partner-3.png")
+
+
+			include inc/footer.pug
+		include inc/scripts.pug

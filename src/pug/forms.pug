@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title формы
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		
+		main#content
+			.inner-content__cont
+				.wrapper
+					.title-block
+						.title-block__crumbs
+							ul.bread-crumbs
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Главная" itemprop="url")
+										span(itemprop="title") Главная
+								li.bread-crumbs__this формы
+						.title-block__title
+							h1 формы
+					.inner-content
+						.cart
+							.forms-list
+								//- a.default-btn.fancybox(href="#auth") Вход
+								//- a.default-btn.fancybox(href="#reg") Регистрация
+								a.default-btn.fancybox(href="#questions") Задать вопрос
+								a.default-btn.fancybox(href="#call") Обратный звонок
+		include inc/footer.pug
+		.popup-form#questions.popup-column-2
+			.forms
+				form
+					.forms__title Задать вопрос
+					.forms__text Наш менеджер свяжется с Вами в ближайшее время
+					.forms-wrap
+						.forms__input-cont
+							input.forms__input(type="text" required="" placeholder="")
+							label.forms__label Ваше имя
+							.forms__error-message
+								.forms__error-message-icon Ошибка
+						.forms__input-cont
+							input.forms__input(type="text" required="" placeholder="")
+							label.forms__label Ваше телефон
+						.forms__input-cont
+							input.forms__input(type="text" required="" placeholder="")
+							label.forms__label Ваше e-mail
+						.forms__input-cont.forms__input-cont--file
+							input(type="file" id="file-1").forms__input.forms__input--file
+							input(readonly="" type="text").forms__input.forms__input--file-support
+							label(for="file-1").forms__label.forms__label--file Прикрепить файл
+							.add-input
+							span.input-del(title="Удалить")
+						.forms__input-cont.forms__input-cont--textarea
+							textarea.forms__input.forms__input--textarea(required="")
+							label.forms__label Ваше сообщение
+					.forms-bot
+						.forms__checkbox
+							input(type="checkbox" id="checkbox-1").forms__checkbox-input
+							label(for="checkbox-1").forms__checkbox-label 
+								span Я согласен на <a href="">обработку персональных данных</a>
+						.forms__submit-cont
+							input(type="submit" value="Отправить").forms__submit
+
+		.popup-form#call.popup-column-1
+			.forms
+				form
+					.forms__title Задать вопрос
+					.forms__text Наш менеджер свяжется с Вами в ближайшее время
+					.forms-wrap
+						.forms__input-cont
+							input.forms__input(type="text" required="" placeholder="")
+							label.forms__label Ваше имя
+							.forms__error-message
+								.forms__error-message-icon Ошибка
+						.forms__input-cont
+							input.forms__input(type="text" required="" placeholder="")
+							label.forms__label Ваше телефон
+
+					.forms-bot
+						.forms__checkbox
+							input(type="checkbox" id="checkbox-1").forms__checkbox-input
+							label(for="checkbox-1").forms__checkbox-label 
+								span Я согласен на <a href="">обработку персональных данных</a>
+						.forms__submit-cont
+							input(type="submit" value="Отправить").forms__submit
+		.popup-form#reg
+			.popup-form__title Регистрация
+			.popup-form__content
+				form(action="")
+					.forms-wrap.forms-wrap--column
+						.forms__input-cont
+							input.forms__input(type="text" required="")
+							label.forms__label ФИО
+						.forms__input-cont
+							input.forms__input(type="text" required="")
+							label.forms__label E-mail
+						.forms__input-cont
+							input.forms__input(type="password" required="")
+							label.forms__label Пароль
+						.forms__input-cont
+							input.forms__input(type="password" required="")
+							label.forms__label Повторить пароль
+					.forms-bot
+						input.arrow-btn(type="submit" value="Зарегистрироваться")
+		include inc/scripts.pug

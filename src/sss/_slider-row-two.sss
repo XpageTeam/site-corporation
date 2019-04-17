@@ -1,0 +1,279 @@
+.slider-row-two
+	.slider-wr
+		display: flex
+
+	.slider
+		&-info
+			text-align: center
+
+		&-block
+
+			&__slide
+				display: flex !important
+
+			&__item-img
+				img
+					width: 100%
+
+			&__cont
+				width: calc(100% - 400px)
+
+		figure
+			flex: none
+			margin-right: 45px
+
+		&-nav
+			position: relative
+			width: 300px
+			margin-right: 90px
+			flex: none
+
+			&:after
+				content: ''
+				position: absolute
+				right: 0
+				top: 0
+				width: 1px
+				height: 100%
+				max-height: 390px
+				background: var(--border-color)
+
+			&__item
+				&:not(:first-child)
+					margin-top: 28px
+
+			&__link
+				position: relative
+				cursor: pointer
+				transition: text-indent .3s ease
+
+				input
+					opacity: 0
+					position: absolute
+
+					&:checked ~ label
+						padding-left: 50px
+						color: var(--main-color)
+
+						&:before
+							transform: scaleX(1)
+
+
+				label
+					cursor: pointer
+					transition: padding .3s ease
+
+					&:before
+						content: ''
+						position: absolute
+						top: 10px
+						left: 0
+						width: 35px
+						height: 1px
+						background: var(--main-color)
+						transform-origin: left
+						transform: scaleX(0)
+						transition: transform .3s ease
+
+
+			.btn
+				margin-top: 45px
+
+		&-block
+
+			&__info
+				text-align: left
+				max-width: 405px
+
+				&__title
+					font-size: rem(23)
+					color: var(--main-color)
+					margin-bottom: 12px
+
+				&__text
+					margin-bottom: 35px
+					line-height: 1.5
+
+
+
+	.slick
+		&-list
+			margin: 0 -30px
+
+		&-slide
+			margin: 0 15px
+
+			> div
+				&:not(:first-child)
+					margin-top: 30px
+
+
+
+	.slider-block
+
+		&__btn
+			display: flex
+			justify-content: center
+			margin-top: 40px
+
+		.slick
+
+
+			&-track
+				display: flex
+
+			&-list
+				margin: 0 -30px
+
+
+		&__item
+			display: flex
+			flex-direction: column
+			flex: 1 1 auto
+			text-decoration: none
+			color: #000
+			transition: box-shadow .5s ease
+			border: 1px solid #f6f7fa
+
+			&:nth-child(2)
+				margin-top: 27px
+
+			&:hover
+				box-shadow: 0px 0px 51.33px 7.67px rgba(37, 41, 77, 0.05)
+
+
+			&-img
+				position: relative
+				margin: 0 !important
+
+			&-info
+				position: relative
+				display: flex
+				flex-direction: column
+				flex: 1 1 auto
+				padding: 27px 33px 40px
+				align-items: flex-start
+
+
+
+
+
+
+		&__info
+
+			&-title
+				font-size: rem(18)
+				margin-bottom: 13px
+
+			&-dop
+				color: #bdc2cf
+				font-size: rem(14)
+
+			&-price
+				font-size: rem(24)
+				margin-top: 21px
+
+				&--sale
+					position: relative
+					font-size: rem(14)
+					color: #b7b7b7
+					margin-top: 5px
+					padding-left: 5px
+					display: flex
+					justify-content: flex-start
+
+					&:before
+						content: ''
+						position: absolute
+						display: block
+						top: 50%
+						left: 0
+						width: 100%
+						height: 1px
+						background: #b7b7b7
+
+			&-btn
+				display: block
+				right: 30px
+				bottom: 30px
+				size: 43px
+				border-radius: 50%
+				background: url('../img/ico-arrow.png') no-repeat center, #f8f9fb
+				position: absolute
+				right: 1.4rem
+				bottom: 1.4rem
+
+	.slider
+		&-cont
+			> .btn
+				margin: 0 auto
+
+
+@media screen and (max-width: 1200px)
+
+.slider-row-two
+	.slider
+		&-nav
+			width: 240px
+			margin-right: 75px
+
+		&-block__cont
+			width: calc(100% - 330px)
+
+	.slider-nav__item
+		&:not(:first-child)
+			margin-top: 20px
+
+
+@media screen and (max-width: 1000px)
+
+	.slider-row-two
+		.slider-wr
+			flex-direction: column
+
+		.slider-nav
+			width: 100%
+			margin-right: 0
+
+			&:after
+				display: none
+
+			.btn
+				margin-top: 0
+
+			&__list
+				display: flex
+				flex-wrap: wrap
+
+			&__item
+				margin-top: 0 !important
+				margin-right: 20px
+				margin-bottom: 20px
+				display: flex
+				align-items: center
+				border: 1px solid var(--second-color)
+
+				input:checked ~ label
+					border: 1px solid var(--main-color)
+
+				label, .reset-filter
+					padding: 5px 15px !important
+					display: inline-block
+
+					&:before
+						display: none !important
+
+		.slider-block
+			&__cont
+				margin-top: 1.4rem
+				width: 100%
+
+			.slick-list
+				margin: 0 -15px
+
+
+@media screen and (max-width: 667px)
+
+	.slider-row-two
+		.slider-block__item-info
+			padding: 1.4rem

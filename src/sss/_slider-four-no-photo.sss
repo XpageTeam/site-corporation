@@ -1,0 +1,313 @@
+.slider-four-no-photo
+	background: var(--second-color)
+
+	.title
+
+		.slick-arrow
+			background: #fff !important
+
+			&:hover
+				background: var(--main-color) !important
+
+	.slick
+		&-slide
+			margin: 15px
+
+		&-list
+			margin: -15px
+
+	.slider
+		display: flex
+
+
+		&-info
+			text-align: center
+
+
+		figure
+			flex: none
+			margin-right: 45px
+
+		&-nav
+			position: relative
+			width: 300px
+			margin-right: 90px
+			flex: none
+
+			&:after
+				content: ''
+				position: absolute
+				right: 0
+				top: 0
+				width: 1px
+				height: 100%
+				max-height: 390px
+				background: var(--border-color)
+
+			&__item
+				&:not(:first-child)
+					margin-top: 35px
+
+			&__link
+				position: relative
+				cursor: pointer
+				transition: text-indent .3s ease
+
+				&:before
+					content: ''
+					position: absolute
+					top: 10px
+					left: 0
+					width: 35px
+					height: 1px
+					background: var(--main-color)
+					transform-origin: left
+					transform: scaleX(0)
+					transition: transform .3s ease
+
+				&.active
+					text-indent: 50px
+					color: var(--main-color)
+
+					&:before
+						transform: scaleX(1)
+
+
+			.btn
+				margin-top: 45px
+
+		&-block
+
+			&__info
+				text-align: left
+				max-width: 405px
+
+				&__title
+					font-size: rem(23)
+					color: var(--main-color)
+					margin-bottom: 12px
+
+				&__text
+					margin-bottom: 35px
+					line-height: 1.5
+
+
+
+
+
+	.title
+		position: relative
+		font-size: rem(25)
+		font-weight: 700
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 25px
+
+		span
+			position: relative
+			padding-left: 24px
+			line-height: 1
+
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: calc(50% - 9px)
+				height: 18px
+				width: 3px
+				background: var(--main-color)
+				display: block
+
+		.btn
+			font-size: rem(16)
+			margin-left: auto
+			margin-right: 70px
+
+
+
+		.slick
+			&-arrow
+				position: relative
+
+				size: 40px
+				border-radius: 50%
+				font-size: 0
+				background: var(--second-color)
+				border: 0
+				transition: background .3s ease
+
+				&:before
+					content: ''
+					display: block
+					size: 8px
+					position: absolute
+					top: calc(50% - 4px)
+					left: calc(50% - 4px)
+					border-top: 1px solid #737374
+					border-right: 1px solid #737374
+					transform: rotate(45deg)
+					transition: border-color .3s ease
+
+				&:hover
+					background: var(--main-color)
+
+					&:before
+						border-top: 1px solid #fff
+						border-right: 1px solid #fff
+
+
+			&-next
+				margin-left: 18px
+
+			&-prev
+				transform: rotate(-180deg)
+
+
+	.slider-block
+
+		&__btn
+			display: flex
+			justify-content: center
+			margin-top: 53px
+
+		.slick
+			&-list
+				margin: 0 -15px
+
+			&-track
+				display: flex
+
+
+
+		&__item
+			display: flex !important
+			flex: 1 1 auto
+			text-decoration: none
+			color: #000
+			transition: box-shadow .5s ease
+			border: 1px solid #f6f7fa
+
+			&:nth-child(2)
+				margin-top: 27px
+
+			&:hover
+				box-shadow: 0px 0px 51.33px 7.67px rgba(37, 41, 77, 0.05)
+
+
+			&-img
+				position: relative
+				margin: 0 !important
+				flex: none
+
+			&-info
+				position: relative
+				display: flex
+				flex-direction: column
+				flex: 1 1 auto
+				padding: 27px 33px 40px
+				align-items: flex-start
+
+
+
+
+
+
+		&__info
+
+			&-title
+				font-size: rem(18)
+				margin-bottom: 13px
+
+			&-dop
+				color: #bdc2cf
+				font-size: rem(14)
+
+			&-price
+				font-size: rem(24)
+				margin-top: 21px
+
+				&--sale
+					position: relative
+					font-size: rem(14)
+					color: #b7b7b7
+					margin-top: 5px
+					padding-left: 5px
+					display: flex
+					justify-content: flex-start
+
+					&:before
+						content: ''
+						position: absolute
+						display: block
+						top: 50%
+						left: 0
+						width: 100%
+						height: 1px
+						background: #b7b7b7
+
+			&-btn
+				display: block
+				right: 30px
+				bottom: 30px
+				size: 43px
+				border-radius: 50%
+				background: url('../img/ico-arrow.png') no-repeat center, #f8f9fb
+				position: absolute
+				right: 1.4rem
+				bottom: 1.4rem
+
+
+	.news
+		&__item
+			position: relative
+			text-decoration: none
+			color: #000
+			background: #fff
+			padding: 30px 35px
+
+			&-title
+				font-size: rem(18)
+
+			&-text
+				font-size: rem(14)
+				color: #909ab0
+				margin-top: 20px
+
+			&-data
+				font-size: rem(12)
+				color: #909ab0
+				margin-top: 30px
+
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				right: 30px
+				bottom: 30px
+				size: 43px
+				border-radius: 50%
+				background: url('../img/ico-arrow.png') no-repeat center, #f8f9fb
+
+@media screen and (max-width: 1000px)
+
+	.slider-four-no-photo
+		.slick
+			&-track
+				display: flex !important
+
+			&-slide
+				display: flex
+				height: auto !important
+
+				div
+					display: flex
+					flex-direction: column
+					flex: 1 1 auto
+
+
+@media screen and (max-width: 660px)
+
+	.slider-four-no-photo
+		.news__item
+			padding: 1.4rem

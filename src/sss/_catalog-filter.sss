@@ -1,0 +1,83 @@
+.catalog
+	&-filter
+		border: 1px solid var(--border-color)
+		padding: 16px 35px
+		margin-bottom: 30px
+.filter
+	display: flex
+	justify-content: space-between
+
+	&__item
+		display: flex
+		align-items: center
+
+
+		&:first-child
+			margin-right: auto
+
+
+	&-type
+		&-grid
+			align-self: flex-end
+			margin-left: 40px
+
+	.selectize-control
+		display: flex
+
+
+.type
+	&-item
+		size: 18px
+		display: inline-block
+
+		&:not(:last-child)
+
+			margin-right: 15px
+
+	&-plate
+		background: url('../img/ico-type-plate.png') no-repeat center
+
+		&:hover
+			background: url('../img/ico-type-plate-active.png') no-repeat center
+
+		&.active
+			background: url('../img/ico-type-plate-active.png') no-repeat center
+
+	&-row
+		background: url('../img/ico-type-row.png') no-repeat center
+
+		&:hover
+			background: url('../img/ico-type-row-active.png') no-repeat center
+
+		&.active
+			background: url('../img/ico-type-row-active.png') no-repeat center
+
+	&-list
+		background: url('../img/ico-type-list.png') no-repeat center
+
+		&:hover
+			background: url('../img/ico-type-list-active.png') no-repeat center
+
+		&.active
+			background: url('../img/ico-type-list-active.png') no-repeat center
+
+
+@media screen and (max-width: 1200px)
+
+	.catalog-filter
+		padding: 1.4rem
+
+@media screen and (max-width: 660px)
+
+	.filter
+		flex-wrap: wrap
+
+		&__item
+			flex-direction: column
+			align-items: flex-start
+
+
+		&-type-grid
+			margin-left: 0
+			margin-top: 20px
+			width: 100%

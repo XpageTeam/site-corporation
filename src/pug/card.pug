@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Карточка товара
+		include inc/head.pug
+		include inc/css.pug
+	body.inner
+		.mobile-menu
+		#page-wr
+			include inc/header.pug
+			#content
+
+				.cart-cont
+					a(href="#").cart-small-cont
+						.cart-small(data-count="2")
+
+				.title-block__cont
+					.wrapper
+						.title-block
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#" title="Главная") Главная
+									a.bread-crumbs__link(href="#" title="Каталог") Каталог
+									span.bread-crumbs__this(href="#") Дом в поселке «Лесной Остров»
+							.title-block__title
+								h1 Дом в поселке «Лесной Остров»
+
+				.wrapper 
+					.card
+						.card-top
+							.card__slider
+								.card__slider-main
+									.card__slider-list
+										.card__slider-item
+											figure.card__slider-img
+												img(src="img/photos/card__slide-img.jpg", alt="")
+												.ico-sale Sale
+										.card__slider-item
+											figure.card__slider-img
+												img(src="img/photos/card__slide-img.jpg", alt="")
+												.ico-sale Sale
+										.card__slider-item
+											figure.card__slider-img
+												img(src="img/photos/card__slide-img.jpg", alt="")
+												.ico-sale Sale
+										.card__slider-item
+											figure.card__slider-img
+												img(src="img/photos/card__slide-img.jpg", alt="")
+												.ico-sale Sale
+
+
+								.card__slider-nav
+									.card__slider-list
+										.card__slider-item
+											figure.card__slider-img
+												img(src="img/photos/card__slide-img.jpg", alt="")
+										.card__slider-item
+											figure.card__slider-img
+												img(src="img/photos/card__slide-img.jpg", alt="")
+										.card__slider-item
+											figure.card__slider-img
+												img(src="img/photos/card__slide-img.jpg", alt="")
+										.card__slider-item
+											figure.card__slider-img
+												img(src="img/photos/card__slide-img.jpg", alt="")
+
+							.card__info
+								.card-title Дом в поселке «Лесной Остров»
+								.card-dop__info
+									.card-art артикул 06282
+									.card-status Свободен
+								.card__price
+									.card-price 4 000 <span>₽</span>/м²
+									.card-price--sale 4 000 <span>₽</span>/м²
+								.card__btn
+									a(href="#").btn.btn--green Купить
+									a(href="#").btn.btn--border Задать вопрос
+								.card__text
+									.text-page
+										p Благодаря модулю связи Wireless Home Digital Interface проектор сможет передавать изображение с Blu-ray-плеера, компьютера, игровой консоли и других устройств без кабеля HDMI.
+						.card-bot 
+							.card-tab
+								.tabs
+									.tabs__top
+										.tabs-tab.active(data-id="1") Описание
+										.tabs-tab(data-id="2") Характеристика
+										.tabs-tab(data-id="3") Документы
+										.tabs-tab(data-id="4") Отзывы
+									.tabs-content.active(data-id="1")
+										.text-page
+											p Малый жилой дом «Kodu 4 x 66» насчитывает 4 квартиры. Площадь каждой квартиры 66,0 м2, в том числе находящаяся на лестничной клетке утепленная и с возможность отопления рабочая комната/техническое помещение площадью 4,8 м2. 
+											p Квартиры первого этажа имеют просторнуя террассу 22,0 м2, а квартиры верхнего этажа балкон 9,3 м2. В квартире есть прихожая, просторная жилая комната, 1 спальния, кухня, ванная с туалетом, баня и рабочая комната/техническое помещение. Планировка квартиры идеально подходит для семьи из 2-х человек.
+
+									.tabs-content(data-id="2")
+										.characteristics
+											.characteristics__list
+												.characteristics__item
+													span Площадь под строением, м2
+													span 4
+												.characteristics__item 
+													span Количество квартир, шт
+													span 264
+												.characteristics__item 
+													span Общая площадь квартир, м2
+													span 4
+												.characteristics__item
+													span Площадь под строением, м2
+													span 264
+												.characteristics__item
+													span Количество квартир, шт
+													span 34
+												.characteristics__item
+													span Общая площадь квартир, м2
+													span 264
+
+									.tabs-content(data-id="3") 
+										.files
+											.files__list
+												.files__item.ico-pdf
+													span Договор об оплате услуг
+													a(href="" target="_blank").ico-zoom
+													a(href="#").ico-download
+												.files__item.ico-jpg
+													span Договор об оплате услуг
+													a(href="" target="_blank").ico-zoom
+													a(href="#").ico-download
+												.files__item.ico-pdf
+													span Договор об оплате услуг
+													a(href="" target="_blank").ico-zoom
+													a(href="#").ico-download
+												.files__item 
+													span Договор об оплате услуг
+													a(href="" target="_blank").ico-zoom
+													a(href="#").ico-download
+
+									.tabs-content(data-id="4")
+										a(href="#").testemonials__item
+											.testemonials__item-top
+												.testemonials__item-photo
+													img(src="img/ico-avatar.svg")
+												div
+													.testemonials__item-title Константин Иванов
+
+													.testemonials__item-subtitle директор, ООО "Константа"
+												
+												.testemonials__item-date 08.05.2018
+
+											.testemonials__item-middle
+												.testemonials__item-text Уютный дом начинается с проекта. Мы занимаемся проектированием зданий с 1998 года и внедрили лучшие находки в наши типовые проекты коттеджей, таунхаусов, бань и беседок. Уютный дом начинается с проекта. Мы занимаемся проектированием зданий с 1998 года и внедрили лучшие находки в наши типовые проекты коттеджей, таунхаусов, бань и беседок...
+											.testemonials__item-files
+												.testemonials__item-file.ico-jpg
+													.file-name Photo 1 (снаружи дома)
+													.file-weight 17.6 Кб
+												.testemonials__item-file.ico-jpg
+													.file-name Photo 2 (изнутри дома)
+													.file-weight 17.6 Кб
+											.testemonials__item-btn
+												.testemonials-btn
+												.testemonials-file
+										a(href="#").testemonials__item
+											.testemonials__item-top
+												.testemonials__item-photo
+													img(src="img/ico-avatar.svg")
+												div
+													.testemonials__item-title Константин Иванов
+
+													.testemonials__item-subtitle директор, ООО "Константа"
+												
+												.testemonials__item-date 08.05.2018
+
+											.testemonials__item-middle
+												.testemonials__item-text Уютный дом начинается с проекта. Мы занимаемся проектированием зданий с 1998 года и внедрили лучшие находки в наши типовые проекты коттеджей, таунхаусов, бань и беседок. Уютный дом начинается с проекта. Мы занимаемся проектированием зданий с 1998 года и внедрили лучшие находки в наши типовые проекты коттеджей, таунхаусов, бань и беседок...
+											.testemonials__item-files
+												.testemonials__item-file.ico-jpg
+													.file-name Photo 1 (снаружи дома)
+													.file-weight 17.6 Кб
+												.testemonials__item-file.ico-jpg
+													.file-name Photo 2 (изнутри дома)
+													.file-weight 17.6 Кб
+											.testemonials__item-btn
+												.testemonials-btn
+												.testemonials-file
+
+										a(href="#").btn.btn--green Оставить отзыв
+
+							.question.wow
+								.question-title Не нашли ответа<br> на свой вопрос?
+								.question-text Свяжитесь с нами, и мы предоставим необходимую информацию.
+								a(href="#").btn.btn--green Задать вопрос
+
+
+
+
+					
+					
+
+
+
+			include inc/footer.pug
+		include inc/scripts.pug

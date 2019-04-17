@@ -1,0 +1,425 @@
+.card
+	&-top
+		display: flex
+		margin-bottom: 65px
+
+	&-bot 
+		display: flex
+
+		.question
+			width: calc(100% - 770px)
+			margin-left: 70px
+
+		.tabs 
+			flex: 1 1 auto
+			justify-content: flex-start
+			align-items: flex-start
+			display: flex
+			flex-direction: column
+
+	&-tab
+		// width: calc(100% - 160px)
+		// margin-right: 68px
+		flex: 1 1 auto
+
+
+	&__slider
+		width: 470px
+		margin-right: 80px
+
+		&-item
+			display: block !important
+
+		img 
+			display: block
+
+		.slick-slide
+			> div 
+				display: block !important
+
+
+
+		&-nav
+			margin-top: 15px
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+			.card__slider-list 
+				width: 350px
+
+
+			.slick
+				&-list 
+					margin: 0 -7px
+
+				&-slide
+					margin: 0 7px
+
+				&-arrow
+					position: relative
+					size: 42px 
+					border-radius: 50% 
+					background: var(--second-color)
+
+					&:before 
+						content: ''
+						display: block
+						size: 10px
+						position: absolute
+						top: calc(50% - 5px)
+						left: calc(50% - 5px)
+						border-top: 1px solid #000
+						border-right: 1px solid #000
+						transform: rotate(45deg)
+
+				&-prev 
+					transform: rotate(-180deg)
+
+
+
+	&-title
+		font-size: rem(22)
+		margin-bottom: 20px
+
+	&-dop__info
+		display: flex
+		align-items: center
+		font-size: rem(12)
+
+		> * 
+			&:not(:last-child)
+				margin-right: 35px
+
+	&__price 
+		margin: 34px 0 
+		line-height: 1
+		display: flex
+		align-items: center
+
+	&-price 
+		font-size: rem(34)
+		font-weight: 700
+
+		&--sale 
+			position: relative
+			color: #b8becd
+			font-size: rem(16)
+			padding: 0 5px
+			margin-left: 27px
+
+			&:before 
+				content: ''
+				position: absolute
+				top: 50%
+				left: 0
+				right: 0
+				height: 1px
+				width: 100%
+				background: #b8becd 
+
+
+	&__btn
+		> .btn 
+			&:not(:last-child)
+				margin-right: 30px
+
+
+	&-art
+		padding: 5px 15px
+		border-radius: 20px 
+		background: var(--second-color)
+
+	&-status
+		color: var(--main-color)
+
+	&__text
+		margin-top: 40px
+
+	.testemonials
+		&__item
+			padding: 60px 
+			border: 1px solid #f8f9fb
+			display: block
+			transition: box-shadow .3s ease
+
+			&:not(:last-child)
+				margin-bottom: 30px
+
+
+			&:hover
+				box-shadow: 0px 0px 50px 8px rgba(37, 41, 77, 0.05)
+
+
+			&.js__file--open
+				.testemonials
+					&-btn
+						background: var(--main-color)
+						transform: rotate(0deg)
+
+						&:before 
+							filter: invert(0)
+
+					&-file
+						opacity: 0
+						pointer-events: none
+
+
+
+
+			&-top 
+				display: flex
+				margin-bottom: 24px 
+
+				
+
+			&-title
+				font-size: rem(18)
+				font-weight: 400
+				line-height: 26px
+				letter-spacing: 0.18px
+
+			&-subtitle
+				color: #b8becd
+				font-size: rem(14)
+				font-weight: 400
+				line-height: 22px
+				letter-spacing: 0.14px
+
+			&-date
+				color: #b8becd
+				font-size: rem(12)
+				font-weight: 400
+				line-height: 1
+				margin-left: auto
+
+			&-files
+				margin-top: 28px
+				display: none
+
+			&-file
+				padding-left: 43px
+				transition: opacity .3s ease
+
+				&:not(:first-child)
+					margin-top: 19px
+
+			&-photo
+				margin-right: 22px
+
+			&-btn
+				margin-top: 32px
+				display: flex
+				justify-content: space-between
+
+
+		&-btn
+			position: relative
+			size: 43px
+			background-color: var(--second-color)
+			border-radius: 50% 
+			transform: rotate(180deg)
+			transition: transform .3s ease, background .3s ease
+
+			&:before 
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				background: url('../img/ico-arrow-up.svg') no-repeat center
+				filter: invert(.3)
+
+		
+
+		&-file
+			size: 36px
+			background: url('../img/ico-clip.png') no-repeat center
+			background-color: var(--second-color)
+			border-radius: 50% 
+			position: relative
+
+
+.characteristics
+	border: 1px solid var(--second-color)
+	padding: 45px 60px
+	
+	&__list 
+		margin-bottom: -10px
+		
+	&__item
+		position: relative
+		display: flex 
+		justify-content: space-between
+		margin-bottom: 10px
+
+		&:after 
+			content: ''
+			position: absolute
+			bottom: 10px
+			left: 0
+			display: block
+			border-bottom: 1px dotted #000
+			height: 1px
+			width: 100%
+
+		span 
+			background: #fff
+			display: inline-block
+			z-index: 1
+
+			&:first-child
+				padding: 0 10px 3px 0
+
+			&:last-child
+				padding: 0 0 3px 10px
+.files
+	&__list 
+		margin-bottom: -15px
+
+	&__item
+		display: flex
+		align-items: center
+		border: 1px solid var(--second-color)
+		padding: 13px 30px
+		background: none !important
+		margin-bottom: 15px
+		transition: border-color .3s ease
+
+		&:hover 
+			border-color: var(--main-color)
+
+		span 
+			margin-right: auto
+
+		a
+			margin-left: 22px
+
+
+
+		&.ico
+			&-jpg, &-pdf
+
+				&:before 
+					content: ''
+					display: inline-block
+					margin-right: 20px
+					size: 23px 26px 
+					background-size: auto
+
+			&-jpg
+				&:before
+					background: url('../img/ico-jpg.png') no-repeat center
+			&-pdf
+				&:before
+					background: url('../img/ico-pdf.png') no-repeat center
+
+@media screen and (max-width: 1200px)
+
+	.card
+		&__slider
+			margin-right: 2rem
+		&__price
+			margin: 20px 0
+
+		&__text
+			margin-top: 25px
+
+		&-top
+			margin-bottom: 40px
+
+		&-bot 
+			.question
+				width: calc(100% - 565px)
+
+@media screen and (max-width: 1000px)
+
+	.card
+		&__slider
+			width: 350px
+
+		&-bot
+			flex-direction: column
+
+			.question
+				width: 100%
+				margin: 2rem 0 0 0
+
+		.testemonials__item
+			padding: 2rem
+
+		&-price
+			font-size: 1.6rem
+
+	.characteristics
+		padding: 2rem
+
+
+@media screen and (max-width: 667px)
+
+	.card
+		&-top
+			flex-direction: column
+
+		&-bot .question 
+			padding: 20px
+
+
+		&__slider
+			width: 100%
+			max-width: 100%
+			margin-bottom: 2rem
+
+			img
+				width: 100%
+
+			&-nav
+				position: relative
+				display: block
+				overflow-x: hidden
+
+				.card__slider-list
+					width: auto
+					max-width: 100%
+				
+				.slick
+					&-arrow
+						flex: none
+						position: absolute
+						top: calc(50% - 15px)
+						z-index: 2
+						size: 30px
+
+					&-prev 
+						left: 0
+
+					&-next 
+						right: 0
+
+		.testemonials
+			&__item
+				padding: 1.4rem
+
+				&-top 
+					flex-direction: column
+
+				&-photo
+					display: none
+
+				&-date
+					margin: 10px 0 0 0
+
+
+
+@media screen and (max-width: 370px)
+
+	.card__btn
+		flex-direction: column
+
+		a 
+			&:not(:first-child)
+				margin-top: 15px
+
+
+

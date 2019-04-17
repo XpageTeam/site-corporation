@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Каталог (услуги) ур.1 v4
+		include inc/head.pug
+		include inc/css.pug
+	body.inner
+		.mobile-menu
+		#page-wr
+			include inc/header.pug
+			#content
+
+				.cart-cont
+					.cart-small(data-count="2")
+
+				.title-block__cont
+					.wrapper
+						.title-block
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#" title="Главная") Главная
+									span.bread-crumbs__this(href="#") Каталог
+							.title-block__title
+								h1 Каталог
+
+				.wrapper 
+					.catalog-services-v-4
+						.catalog-list
+							- for (var i = 0; i < 9; i++)
+								a(href="").catalog-item.wow
+									figure.catalog-item__img
+										img(src="img/photos/catalog-one-v-4.jpg", alt="")
+									.catalog-item__info
+										.catalog-item__title Дома из клееного бруса
+									.catalog-item__btn 
+										.btn-circle
+
+
+
+					
+					
+
+
+
+			include inc/footer.pug
+		include inc/scripts.pug

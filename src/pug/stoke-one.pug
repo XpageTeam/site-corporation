@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Страница одной акции
+		include inc/head.pug
+		include inc/css.pug
+	body.inner
+		.mobile-menu
+		#page-wr
+			include inc/header.pug
+			#content
+
+				.cart-cont
+					a(href="#").cart-small-cont
+						.cart-small(data-count="2")
+
+				.title-block__cont
+					.wrapper
+						.title-block
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#" title="Главная") Главная
+									span.bread-crumbs__this(href="#") Специальное предложение на оконные системы
+							.title-block__title
+								h1 Специальное предложение на оконные системы
+
+				.wrapper
+					.standart-slider
+						.standart-slider__arrow
+						.standart-slider__list
+							.standart-slider__item
+								figure.standart-slider__img
+									img(src="img/photos/standert-slider-img.jpg")
+									figcaption.standart-slider__text В Челябинске открылись два новых фирменных магазина
+							.standart-slider__item
+								figure.standart-slider__img
+									img(src="img/photos/standert-slider-img.jpg")
+									figcaption.standart-slider__text В Челябинске открылись два новых фирменных магазина
+										
+											
+					.standart-page
+						.text-page
+							figure(align="right")
+								img(src="img/photos/stoke-v5.jpg")
+								figcaption В Челябинске открылись два новых фирменных магазина
+							h2 h2. В Челябинске открылись два новых фирменных магазина
+							p
+								i Лид — это первый абзац статьи, информативный отрывок позволяющий захватить внимание читателя на данном материале. Необязательный элемент.
+							p Эта страница создана для демонстрации блоков и элементов, которые используются на сайте, и служит руководством для всех, кто работает над ним. Дизайнеры и технологи отрабатывают здесь стили, чтобы добиться приемлемых результатов в различных сочетаниях блоков и элементов. Контент-менеджеры и редакторы используют страницу в качестве справочника по верстке типовых страниц. Здесь же рассказывается о некоторых общих правилах оформления контента.
+							h3 H3. Дополнительная колонка может быть снабжена заголовками
+							p Многострочный заголовок, длина которого иногда бывает так некстати Типовые элементы оформляются в системе администрирования через визуальный редактор «Реформатор». Чтобы контент-менеджеру было легче в них ориентироваться, их количество лучше свести к необходимому минимуму.
+							h4 H4. Дополнительная колонка может быть снабжена заголовками
+							p Имманентный подход подразумевает отношение к тексту как к автономной реальности, нацеленность на выявление его внутренней структуры. Репрезентативный — рассмотрение текста как особой формы представления знаний о внешней тексту действительности.
+							h5 H5. В первую очередь нас интересуют интерлиньяж и отступы, но не стоит забывать и про сам заголовок
+							p Текст состоит из некоторого количества предложений. Одно предложение, даже очень распространённое, сложное, текстом назвать нельзя, поскольку текст можно расчленить на самостоятельные предложения, а части предложения сочетаются по законам синтаксиса сложного предложения, но не текста.
+							br
+							h3 Списки
+							p Кроме того, существуют правила оформления списков:
+							ul
+								li Если пункты списка длинные и представляют собой развернутые предложения, они должны начинаться с прописной буквы и заканчиваться точкой.
+									ul
+										li Если пункты списка длинные и представляют собой развернутые предложения, они должны начинаться с прописной буквы и заканчиваться точкой.
+										li Если пункты списка короткие, не являются самостоятельной законченной конструкцией и грамматически тесно связаны с предшествующей списку вводной фразой, они должны начинаться 
+								li Если пункты списка короткие, не являются самостоятельной законченной конструкцией и грамматически тесно связаны с предшествующей списку вводной фразой, они должны начинаться со строчной буквы и заканчиваться точкой с запятой (в конце последнего пункта — точка).
+							ol
+								li Если пункты списка длинные и представляют собой развернутые предложения, они должны начинаться с прописной буквы и заканчиваться точкой.
+								li Если пункты списка короткие, не являются самостоятельной законченной конструкцией и грамматически тесно связаны с предшествующей списку вводной фразой, они должны начинаться со строчной буквы и заканчиваться точкой с запятой (в конце последнего пункта — точка).
+							h3 Ссылки
+							p На сайте может встречаться несколько видов ссылок. Например, ссылка на Яндекс является внешней. Внутренние ссылки могут открываться по умолчанию в текущем окне (например, переход на главную страницу) или в новом окне (например, для показа изображений в оригинальном размере). 
+							br
+							table(border="1")
+								thead
+									tr
+										th Аутсорсинг
+										th Консалтинг
+										th Проектирование
+										th Аудит
+								tbody
+									tr
+										td 
+											p 1
+										td 
+											p(style="text-align: center") 5000 Р.
+										td 
+											p(style="text-align: center") 35 дней
+										td 
+											p(style="text-align: center") 3,3%
+									tr
+										td 
+											p 2
+										td 
+											p(style="text-align: center") 5000 Р.
+										td 
+											p(style="text-align: center") 35 дней
+										td 
+											p(style="text-align: center") 3,3%
+									tr
+										td 
+											p Потрясающий, невероятно насыщенный
+										td 
+											p(style="text-align: center") 5000 Р.
+										td 
+											p(style="text-align: center") 35 дней
+										td 
+											p(style="text-align: center") 3,3%
+				.slider.slider-tovar
+					.wrapper
+						.slider-cont
+							.title 
+								span Акционные товары
+								a(href="#").btn Смотреть все
+								.slider-arrow
+							.slider__block
+								.slider__block-list
+									a(href="#").slider-block__item
+										figure.slider-block__item-img
+											img(src="img/photos/img-slide-4-1.jpg")
+											.ico-sale Sale
+										.slider-block__item-info 
+											.slider-block__info-title Дом на озере Аргази
+											.slider-block__info-dop Кресло, Гранн, Бумстад белый/дерево
+											.slider-block__info-price 23 700 Р
+											.slider-block__info-price--sale 23 700 Р
+											.slider-block__info-btn.ico-cart
+									a(href="#").slider-block__item
+										figure.slider-block__item-img
+											img(src="img/photos/img-slide-4-1.jpg")
+											.ico-sale Sale
+										.slider-block__item-info 
+											.slider-block__info-title Дом на озере Аргази
+											.slider-block__info-dop Кресло, Гранн, Бумстад белый/дерево
+											.slider-block__info-price 23 700 Р
+											.slider-block__info-price--sale 23 700 Р
+											.slider-block__info-btn
+									a(href="#").slider-block__item
+										figure.slider-block__item-img
+											img(src="img/photos/img-slide-4-1.jpg")
+											.ico-sale Sale
+										.slider-block__item-info 
+											.slider-block__info-title Дом на озере Аргази
+											.slider-block__info-dop Кресло, Гранн, Бумстад белый/дерево
+											.slider-block__info-price 23 700 Р
+											.slider-block__info-price--sale 23 700 Р
+											.slider-block__info-btn.ico-cart
+									a(href="#").slider-block__item
+										figure.slider-block__item-img
+											img(src="img/photos/img-slide-4-1.jpg")
+											.ico-sale Sale
+										.slider-block__item-info 
+											.slider-block__info-title Дом на озере Аргази
+											.slider-block__info-dop Кресло, Гранн, Бумстад белый/дерево
+											.slider-block__info-price 23 700 Р
+											.slider-block__info-price--sale 23 700 Р
+											.slider-block__info-btn.ico-cart
+									a(href="#").slider-block__item
+										figure.slider-block__item-img
+											img(src="img/photos/img-slide-4-1.jpg")
+											.ico-sale Sale
+										.slider-block__item-info 
+											.slider-block__info-title Дом на озере Аргази
+											.slider-block__info-dop Кресло, Гранн, Бумстад белый/дерево
+											.slider-block__info-price 23 700 Р
+											.slider-block__info-price--sale 23 700 Р
+											.slider-block__info-btn.ico-cart
+
+
+
+
+			include inc/footer.pug
+		include inc/scripts.pug

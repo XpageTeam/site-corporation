@@ -1,0 +1,105 @@
+form
+	.catalog-filter__bock
+		.filter-block
+			.filter-block__title Каталог
+			ul.filter-block__list
+				li.filter-block__item.active
+					a(href="#") Каркасные дома
+				li.filter-block__item
+					a(href="#") Дома из пеноблоков
+				li.filter-block__item
+					a(href="#") Беседки
+				li.filter-block__item
+					a(href="#") Бани
+
+
+
+
+
+		.filter-block
+			.filter-block__title Фильтр
+			.filter-block__content
+				.filter-block__content-item
+					.filter-block-title Цена
+					.filter-block__price
+						.price-filter(data-step="10")
+							.input-group
+								input.catalog-filter__input.input-group__input(type="tel" data-min="0" value="0")
+								input.catalog-filter__input.input-group__input(type="tel" data-max="3000" value="3000")
+							i.price-filter__range.range
+				.filter-block__content-item
+					.filter-block-title Цвет
+					ul.filter__checks
+						li.filter__checks-el
+							.checkbox
+								input.checkbox__input(type="checkbox" id="check-f")
+								label.checkbox__label(for="check-f") Красный
+						li.filter__checks-el
+							.checkbox
+								input.checkbox__input(type="checkbox" id="check-a")
+								label.checkbox__label(for="check-a") Белый
+						li.filter__checks-el
+							.checkbox
+								input.checkbox__input(type="checkbox" id="check-b")
+								label.checkbox__label(for="check-b") Черный
+						li.filter__checks-el
+							.checkbox
+								input.checkbox__input(type="checkbox" id="check-d")
+								label.checkbox__label(for="check-d") Желтый
+						li.filter__checks-el
+							.checkbox
+								input.checkbox__input(type="checkbox" id="check-e")
+								label.checkbox__label(for="check-e") Зеленый
+				.filter-block__content-item
+					.filter-block-title Количество комнат
+					ul.filter__checks
+						li.filter__checks-el
+							.checkbox
+								input.checkbox__input(type="checkbox" id="check-f")
+								label.checkbox__label(for="check-f") 1
+						li.filter__checks-el
+							.checkbox
+								input.checkbox__input(type="checkbox" id="check-a")
+								label.checkbox__label(for="check-a") 2
+						li.filter__checks-el
+							.checkbox
+								input.checkbox__input(type="checkbox" id="check-b")
+								label.checkbox__label(for="check-b") 3
+				.filter-block__content-item
+					.filter-block-title Количество этажей
+					ul.filter__checks
+						li.filter__checks-el
+							.checkbox
+								input.checkbox__input(type="checkbox" id="check-f")
+								label.checkbox__label(for="check-f") 1
+						li.filter__checks-el
+							.checkbox
+								input.checkbox__input(type="checkbox" id="check-a")
+								label.checkbox__label(for="check-a") 2
+						li.filter__checks-el
+							.checkbox
+								input.checkbox__input(type="checkbox" id="check-b")
+								label.checkbox__label(for="check-b") 3
+
+				.filter-block__content-item
+					.filter-block-title Партнеры
+					ul.filter__checks
+						li.filter__checks-el
+							.checkbox
+								input.checkbox__input(type="checkbox" id="check-f")
+								label.checkbox__label(for="check-f") 1
+						li.filter__checks-el
+							.checkbox
+								input.checkbox__input(type="checkbox" id="check-a")
+								label.checkbox__label(for="check-a") 2
+						li.filter__checks-el
+							.checkbox
+								input.checkbox__input(type="checkbox" id="check-b")
+								label.checkbox__label(for="check-b") 3
+
+				
+	
+				.filter__btns
+					.filter-btns
+						input.filter-btns__btn.filter-btns__btn--submit(type="submit" value="Показать")
+						a.filter-btns__btn.filter-btns__btn--reset(href="#") Сбросить

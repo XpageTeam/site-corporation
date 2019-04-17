@@ -1,0 +1,389 @@
+html
+	font-size: 100%
+
+input, a, button, textarea, select
+	outline: none
+
+*::-webkit-input-placeholder
+	color: #adb4c6
+	opacity: 1
+
+*:-moz-placeholder
+	color: #adb4c6
+	opacity: 1
+
+*::-moz-placeholder
+	color: #adb4c6
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #adb4c6
+	opacity: 1
+
+
+
+.slick-arrow
+	border: none
+	background: none
+	padding: 0
+	text-indent: -9999px
+	overflow: hidden
+
+.swiper-button-disabled
+	opacity: .5
+	pointer-events: none
+
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea, select, input[type="submit"], button
+	-webkit-appearance: none
+	appearance: none
+	font: inherit
+	border-radius: 0
+
+	&:focus
+
+		&::-webkit-input-placeholder
+			opacity: 0
+
+		&:-moz-placeholder
+			opacity: 0
+
+		&::-moz-placeholder
+			opacity: 0
+
+		&:-ms-input-placeholder
+			opacity: 0
+
+
+*, *:after, *:before
+	box-sizing: border-box
+
+*[v-cloak]
+	display: none
+
+i.rub
+	font-family: "Roboto"
+	font-style: normal
+
+address
+	font-weight: inherit
+
+body
+	min-width: 320px
+	line-height: lh(24, 16)
+	font-family: var(--default-font)
+	font-weight: 400
+	font-size: 16px
+	background: #fff
+	color: #000
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	/* overflow-x: hidden */
+
+select
+	-webkit-appearance: none
+	/* for FF */
+	-moz-appearance: none
+	text-indent: 0.01px
+	text-overflow: ''
+	/* for IE */
+	-ms-appearance: none
+	appearance: none!important
+
+	&::-ms-expand
+		display: none
+
+.head, .footer
+	flex: none
+
+#content
+	position: relative
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+
+#page-wr
+	display: flex
+	flex-direction: column
+	flex: 1 1 auto
+	background: #fff
+	position: relative
+
+a
+	color: #000
+	font-weight: inherit
+	text-decoration: none
+
+	&[href^="tel"], &[href^="mail"]
+		white-space: nowrap
+
+
+.wrapper
+	max-width: var(--base-width)
+	padding: 0 2rem
+	margin: 0 auto
+	box-sizing: content-box
+	/* width: 100% */
+
+	> * 
+		width: var(--base-width)
+		max-width: 100%
+
+
+
+input[type="submit"], button
+	cursor: pointer
+
+img, svg
+	max-width: 100%
+
+li
+	list-style: none
+
+.table-wrap
+	position: relative
+
+	&__track
+		overflow-x: auto
+		-webkit-overflow-scrolling: touch
+
+	&__shadow
+		width: 12px
+		position: absolute 0 *
+		pointer-events: none
+		background: linear-gradient(to right, rgba(#fff, .0001), rgba(#000, .1))
+		opacity: 0
+
+		&--left
+			left: 0
+			transform: rotateZ(180deg)
+
+		&--right
+			right: 0
+
+
+.standart-slider
+	position: relative
+
+	&__arrow
+		position: absolute
+		top: calc(50% - 21px)
+		left: 0
+		right: 0
+		z-index: 1
+		display: flex
+		justify-content: space-between
+
+		.slick
+			&-arrow
+				position: relative
+				size: 42px
+				border-radius: 50%
+				background: #fff
+				z-index: 1
+
+				&:before
+					content: ''
+					position: absolute
+					top: calc(50% - 3px)
+					right: calc(50% - 3px)
+					display: block
+					size: 6px
+					border-top: 1px solid #000
+					border-right: 1px solid #000
+					transform: rotate(45deg)
+
+			&-prev
+				transform: rotate(-180deg)
+				margin-left: 40px
+
+			&-next
+				margin-right: 40px
+
+	&__text
+		margin: 20px 0 0
+		background: var(--second-color)
+		padding: 20px 34px
+
+.standart-page
+
+
+	.text-page
+		max-width: 1000px
+
+		> figure
+			display: flex
+			flex-direction: column
+
+			figcaption
+				margin: 14px 0 0
+				background: var(--second-color)
+				padding: 20px 34px
+
+@custom-selector :--heading h2, h3, h4, h5, h6
+@custom-selector :--smallHeading h5, h6
+
+.text-page
+
+	> *:not(:first-child)
+		margin-top: rem(25)
+
+	strong
+		font-weight: bold
+
+	h2, h3, h4, h5, h6
+		font-weight: bold
+
+	h2
+		font-size: rem(22)
+		line-height: lh(28, 22)
+
+	h3
+		font-size: rem(20)
+		line-height: lh(26, 20)
+
+	h4
+		font-size: rem(18)
+		line-height: lh(24, 18)
+
+	h5, h6
+		font-size: rem(16)
+		line-height: lh(24, 16)
+
+	blockquote
+		background: var(--second-color)
+		padding: rem(28) rem(50) rem(28) rem(55)
+		line-height: lh(26, 14)
+
+		a
+			font-size: rem(16)
+			border-bottom: none
+			font-weight: bold
+
+	[align="right"]
+		float: right
+		margin-left: 80px
+
+	[align="left"]
+		float: left
+		margin-right: 80px
+
+	& img[height]
+		height: auto
+
+	& img[align]
+		margin-bottom: rem(22)
+
+	& table
+		width: 100%
+
+		& td, & th
+			padding: 15px 23px
+			font-weight: 300
+
+			&:not([valign]), &[valign="middle"]
+				vertical-align: middle
+
+			&[valign="top"]
+				vertical-align: top
+
+			&[valign="bottom"]
+				vertical-align: bottom
+
+		&[cellspacing]:not([cellspacing="1"]):not([cellspacing="0"])
+
+	& table[border="1"]
+
+		& td, & th
+			border: 1px solid var(--border-color)
+
+	ul, ol
+		list-style: none !important
+		max-width: 720px !important
+
+	li
+		position: relative
+		// line-height: 1.3
+
+		&:not(:first-child)
+			margin: 6px 0 0
+
+		&:before
+			display: inline-block
+
+		ul, ol
+			margin-bottom: 20px
+			margin-top: 0
+
+		li
+			padding-left: 10px
+
+			&:before
+				margin-right: 10px !important
+
+			&:not(:first-child)
+				margin-top: 5px
+
+	ul
+
+		li
+			padding-left: 10px
+
+			&:before
+				content: ""
+				position: absolute
+				top: 9px
+				left: 0
+				size: 5px 1px
+				background: #000
+				margin: 0 4px 0 0
+				display: inline-block
+
+			li
+				padding-left: 20px
+
+
+
+	& ol
+		counter-reset: i
+
+		& li
+			counter-increment: i
+
+			&:before
+				content: counter(i) "."
+				margin-right: 4px
+
+
+@media screen and (max-width: 1200px)
+
+	.wrapper
+		width: 100%
+		box-sizing: border-box
+
+@media screen and (max-width: 1000px)
+	
+	body
+		font-size: 96%
+
+	.text-page 
+		[align="right"]
+			margin-left: 30px
+			margin-bottom: 20px
+
+		[align="left"]
+			margin-right: 30px
+			margin-bottom: 20px
+
+
+	.standart-page 
+		.text-page > figure
+			max-width: 350px
+
+
+@media screen and (max-width: 660px)
+
+	.standart-page .text-page > figure
+		max-width: 100%
+		width: 100%
+		margin: 0 0 20px 0

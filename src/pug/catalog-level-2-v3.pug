@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Каталог ур.2 v3
+		include inc/head.pug
+		include inc/css.pug
+	body.inner
+		.mobile-menu
+		#page-wr
+			include inc/header.pug
+			#content
+
+				.cart-cont
+					a(href="#").cart-small-cont
+						.cart-small(data-count="2")
+
+				.title-block__cont
+					.wrapper
+						.title-block
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#" title="Главная") Главная
+									span.bread-crumbs__this(href="#") Каталог
+							.title-block__title
+								h1 Каталог
+
+				.wrapper
+					include inc/filter.pug
+
+					.catalog-two-v-3
+						.catalog-list
+							- for (var i = 0; i < 9; i++)
+								.catalog__item
+									figure.catalog__item-img
+										img(src="img/photos/catalog-two-v-3.jpg")
+										.ico-sale Sale
+									.catalog__item-info 
+										.catalog__info-title ЖК «Подсолнухи»
+										.catalog__info-dop Всего 50 мин от аэропорта Ванта-Хельсинки или ж/д вокзала – и вы в исключительно красивом сосновом лесу на берегу Финского залива, рядом с отличным гольф клубом.
+										.catalog__info-dop--hidden
+											.text-page 
+												p Площадь: 250 м2<br> Производитель: Россия<br> Сезон: Лето
+										.catalog__info-link-more Развернуть
+
+									.catalog__item-price
+										.catalog__info-price 23 700 Р
+										.catalog__info-price--sale 23 700 Р
+										a(href="#").catalog__info-btn.ico-cart
+
+
+						include inc/paginator.pug
+						
+
+					
+					
+
+
+
+			include inc/footer.pug
+		include inc/scripts.pug

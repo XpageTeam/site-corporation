@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Галерея v2
+		include inc/head.pug
+		include inc/css.pug
+	body.inner
+		.mobile-menu
+		#page-wr
+			include inc/header.pug
+			#content
+
+				.cart-cont
+					a(href="#").cart-small-cont
+						.cart-small(data-count="2")
+
+				.title-block__cont
+					.wrapper
+						.title-block
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#" title="Главная") Главная
+									span.bread-crumbs__this(href="#") Галерея
+							.title-block__title
+								h1 Галерея
+
+				.wrapper
+					.gallery__cont
+						.gallery-v2
+							.gallery__list
+								- for (var i = 0; i < 9; i++)
+									a(href="#").gallery__item
+										figure.gallery__item-img
+											img(src="img/photos/stoke-v5.jpg")
+											.ico-info Каркасные дома
+										.gallery__item-info
+											.gallery__item-info-title Беседки
+											.gallery__item-info-text Проектируем беседки по индивидуальным заказам и строим по готовым чертежам
+											.gallery__item-info-btn
+									
+											
+										
+							include inc/paginator.pug
+
+
+
+
+
+			include inc/footer.pug
+		include inc/scripts.pug

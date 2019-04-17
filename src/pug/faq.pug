@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Вопрос - ответ
+		include inc/head.pug
+		include inc/css.pug
+	body.inner
+		.mobile-menu
+		#page-wr
+			include inc/header.pug
+			#content
+				.cart-cont
+					a(href="#").cart-small-cont
+						.cart-small(data-count="2")
+
+				.title-block__cont
+					.wrapper
+						.title-block
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#" title="Главная") Главная
+									span.bread-crumbs__this Вопрос - ответ
+							.title-block__title
+								h1 Вопрос - ответ
+				.wrapper 
+					.faq
+						.text-page 
+							p В данном разделе приведены ответа на часто задаваемые вопросы посетителей Вашего будущего сайта. Использование данного раздела позволит сократить нагрузку на операторов и повысить удовлетворенность ваших клиентов.
+
+						.faq__links
+							a(href="#").active Все
+							a(href="#") Новостройки
+							a(href="#") Вторичное жилье
+
+						.faq__list
+							.faq__item
+								.faq__item-top
+									span Что значит "лицензия позволяет создать два сайта"?
+								.faq__item-bot
+									.text-page
+										p На основе одного экземпляра продукта можно создать два сайта в рамках одного веб-проекта. Если сайтов в проекте больше двух, необходимо докупить лицензии на сайты, стоимость которых зависит от редакции: http://www.1c-bitrix.ru/buy/cms.php#tab-sites-link.
+										p Такие сайты работают на одном экземпляре базы данных и имеют один административный интерфейс. А значит, администратор системы является администратором всех сайтов, работающих на одной копии продукта.
+										p Важно не путать понятия "сайт" и "копия продукта" ("установка продукта"). Несколько сайтов настраиваются на одной установке. При этом лицензия допускает наличие двух установок, одна из которых предназначена для разработки и не доступна из Интернета.
+										p Общими для сайтов являются:
+
+										ul
+											li база пользователей,
+											li настройки модулей (и сами модули),
+											li шаблоны сайтов,
+											li система авторизации
+										| p и др.
+							.faq__item
+								.faq__item-top
+									span Хочу купить решение, но у меня только демо версия 1С-Битрикс
+								.faq__item-bot
+									.text-page
+										p На основе одного экземпляра продукта можно создать два сайта в рамках одного веб-проекта. Если сайтов в проекте больше двух, необходимо докупить лицензии на сайты, стоимость которых зависит от редакции: http://www.1c-bitrix.ru/buy/cms.php#tab-sites-link.
+										p Такие сайты работают на одном экземпляре базы данных и имеют один административный интерфейс. А значит, администратор системы является администратором всех сайтов, работающих на одной копии продукта.
+										p Важно не путать понятия "сайт" и "копия продукта" ("установка продукта"). Несколько сайтов настраиваются на одной установке. При этом лицензия допускает наличие двух установок, одна из которых предназначена для разработки и не доступна из Интернета.
+										p Общими для сайтов являются:
+
+										ul
+											li база пользователей,
+											li настройки модулей (и сами модули),
+											li шаблоны сайтов,
+											li система авторизации
+										| и др.
+							.faq__item
+								.faq__item-top
+									span Если ли мануал по работе с панелью администратора? Т.к. в большом количестве настроек мы потрялись
+								.faq__item-bot
+									.text-page
+										p На основе одного экземпляра продукта можно создать два сайта в рамках одного веб-проекта. Если сайтов в проекте больше двух, необходимо докупить лицензии на сайты, стоимость которых зависит от редакции: http://www.1c-bitrix.ru/buy/cms.php#tab-sites-link.
+										p Такие сайты работают на одном экземпляре базы данных и имеют один административный интерфейс. А значит, администратор системы является администратором всех сайтов, работающих на одной копии продукта.
+										p Важно не путать понятия "сайт" и "копия продукта" ("установка продукта"). Несколько сайтов настраиваются на одной установке. При этом лицензия допускает наличие двух установок, одна из которых предназначена для разработки и не доступна из Интернета.
+										p Общими для сайтов являются:
+
+										ul
+											li база пользователей,
+											li настройки модулей (и сами модули),
+											li шаблоны сайтов,
+											li система авторизации
+										| и др.
+				.question-ask__cont
+					.wrapper
+						.question-ask
+							.forms
+								form
+									.forms__title Задать вопрос
+									.forms__text Наш менеджер свяжется с Вами в ближайшее время
+									.forms-wrap
+										.forms__input-cont
+											input.forms__input(type="text" required="" placeholder="")
+											label.forms__label Ваше имя
+										.forms__input-cont
+											input.forms__input(type="text" required="" placeholder="")
+											label.forms__label Ваше телефон
+										.forms__input-cont
+											input.forms__input(type="text" required="" placeholder="")
+											label.forms__label Ваше e-mail
+										.forms__input-cont.forms__input-cont--file
+											input(type="file" id="file-1").forms__input.forms__input--file
+											input(readonly="" type="text").forms__input.forms__input--file-support
+											label(for="file-1").forms__label.forms__label--file Прикрепить файл
+											.add-input
+											span.input-del(title="Удалить")
+										.forms__input-cont.forms__input-cont--textarea
+											textarea.forms__input.forms__input--textarea(required="")
+											label.forms__label Ваше сообщение
+									.forms-bot
+										.forms__checkbox
+											input(type="checkbox" id="checkbox-1").forms__checkbox-input
+											label(for="checkbox-1").forms__checkbox-label 
+												span Я согласен на <a href="">обработку персональных данных</a>
+										.forms__submit-cont
+											input(type="submit" value="Отправить").forms__submit
+										
+										
+										
+								
+							.question.wow
+								.question-title Не нашли ответа<br> на свой вопрос?
+								.question-text Свяжитесь с нами, и мы предоставим необходимую информацию.
+								a(href="#").btn.btn--green Задать вопрос
+						
+									
+					
+
+
+
+
+			include inc/footer.pug
+		include inc/scripts.pug

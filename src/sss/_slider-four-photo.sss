@@ -1,0 +1,131 @@
+.slider-four-photo
+
+	.slider
+
+		figure
+			flex: none
+			margin-right: 45px
+
+		&-nav
+			position: relative
+			width: 300px
+			margin-right: 90px
+			flex: none
+
+			&:after
+				content: ''
+				position: absolute
+				right: 0
+				top: 0
+				width: 1px
+				height: 100%
+				max-height: 390px
+				background: var(--border-color)
+
+			&__item
+				&:not(:first-child)
+					margin-top: 35px
+
+			&__link
+				position: relative
+				cursor: pointer
+				transition: text-indent .3s ease
+
+				&:before
+					content: ''
+					position: absolute
+					top: 10px
+					left: 0
+					width: 35px
+					height: 1px
+					background: var(--main-color)
+					transform-origin: left
+					transform: scaleX(0)
+					transition: transform .3s ease
+
+				&.active
+					text-indent: 50px
+					color: var(--main-color)
+
+					&:before
+						transform: scaleX(1)
+
+
+			.btn
+				margin-top: 45px
+
+
+		&__block
+			&-item
+				position: relative
+
+				img
+					display: block
+
+				&:hover
+					.slider__block-info
+						opacity: 1
+
+			&-info
+
+				opacity: 0
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background: var(--main-color)
+				color: #fff
+				padding: 35px 38px
+				transition: opacity .3s ease
+
+
+	.slider-info-title
+		margin-bottom: 15px
+		font-size: rem(18)
+
+	.slider-info-text
+		font-size: rem(14)
+
+	.slider__block-info-btn
+		display: block
+		right: 30px
+		bottom: 30px
+		size: 43px
+		border-radius: 50%
+		background: url('../img/ico-arrow.png') no-repeat center, #f8f9fb
+		position: absolute
+		right: 1.4rem
+		bottom: 1.4rem
+
+	.slick
+		&-slide
+			margin: 0 15px
+
+		&-list
+			margin: 0 -15px
+
+
+
+	.slider
+		&-cont
+			> .btn
+				margin: 0 auto
+
+@media screen and (max-width: 1200px)
+
+	.slider-four-photo
+		.slider__block-info
+			padding: 1.4rem
+
+		.slider-info-title
+			margin-bottom: 10px
+
+
+
+@media screen and (max-width: 660px)
+
+	.slider-four-photo .slider__block-item
+		img
+			width: 100%
+			display: block

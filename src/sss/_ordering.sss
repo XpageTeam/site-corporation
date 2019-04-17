@@ -1,0 +1,321 @@
+.ordering
+	display: flex
+
+	&__data
+		flex: 1 1 auto
+
+	&__summary
+		flex: none
+		width: 416px
+		margin-left: rem(54)
+
+		&.ordering__summary--mobile
+			display: none
+
+.o-summary
+	top: 20px
+
+	&__title
+		font-weight: bold
+		font-size: rem(16)
+		letter-spacing: .01em
+		line-height: lh(22, 16)
+
+	&__change
+		color: var(--main-color)
+		border-bottom: 1px solid #c9daf0
+		line-height: 1
+
+	&__title-cont, &__footer
+		background: var(--second-color)
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: rem(22) rem(29) rem(25)
+
+	&__content
+		border-left: 1px solid var(--border-color)
+		border-right: 1px solid var(--border-color)
+
+	&__item
+		padding: rem(22) rem(29)
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		&:not(:first-child)
+			border-top: 1px solid var(--border-color)
+
+		&-title
+			max-width: 225px
+
+		&-price
+			white-space: nowrap
+			margin-left: 25px
+
+	&__footer
+		font-weight: bold
+		font-size: rem(18)
+		line-height: lh(22, 18)
+
+		&-price
+			white-space: nowrap
+
+.order-data
+
+	&__item
+
+		&:not(:first-child)
+			margin: rem(60) 0 0
+
+	&__btns
+		margin: rem(47) 0 0
+		display: flex
+		flex-wrap: wrap
+
+		.arrow-btn
+
+			&:not(:last-child)
+				margin-right: 23px
+
+.od
+
+	&__content
+		margin: rem(22) 0 0
+
+	&:not(.js__opened)
+
+		.od
+
+			&__content
+				display: none
+
+			&__title
+
+				&-cont
+
+					&:after
+						transform: rotate(180deg)
+
+	&__notice
+		position: relative
+		border-radius: 50%
+		size: width("../img/ico-!.png") height("../img/ico-!.png")
+		background: url("../img/ico-!.png") no-repeat
+
+		&:not(:first-child)
+			margin-left: 18px
+
+		&:hover
+
+			.od__notice-popup
+				opacity: 1
+
+		&-popup
+			position: absolute * * calc(100% + 17px) -30px
+			background: #fff
+			/* box-shadow: var(--boxShadow) */
+			padding: 23px 33px 26px
+			width: 430px
+			opacity: 0
+			pointer-events: none
+			transition: opacity .3s ease
+
+			&:after
+				content: ""
+				background: #fff
+				size: 12px
+				transform: rotate(45deg)
+				position: absolute calc(100% - 6px) * * 35px
+
+	&__title
+		font-weight: bold
+		font-size: rem(16)
+
+		&-cont
+			padding: 20px 82px 22px 37px
+			background: var(--second-color)
+			position: relative
+			cursor: pointer
+			display: flex
+			align-items: center
+
+			&:after
+				content: ""
+				position: absolute calc(50% - height("../img/ico-black-arrow-top.png") / 2) 41px * *
+				background: url("../img/ico-black-arrow-top.png") no-repeat
+				size: width("../img/ico-black-arrow-top.png") height("../img/ico-black-arrow-top.png")
+
+.od-person
+
+	&__notice
+		padding: 15px 0 0
+
+	&__form
+
+		&:not(:first-child)
+			margin: 2rem 0 0
+
+		&:after
+			content: ""
+			display: table
+			clear: both
+
+		.forms
+
+			&__label
+				margin-bottom: 8px
+
+			&__input
+
+				&--textarea
+					height: 233px
+
+				&-cont
+
+					&:not(.forms__input-cont--textarea)
+						float: left
+						width: persent(292, 669)
+
+						&:not(:first-child)
+							margin: 17px 0 0
+
+					&--textarea
+						float: right
+						width: persent(348, 669)
+
+						+ .forms__input-cont
+							margin: 0 !important
+
+@supports (display: grid)
+	.od-person
+
+		&__form
+			display: grid
+			grid-template-columns: persent(292, 669) persent(348, 669)
+			grid-gap: 17px 29px
+
+			&:after
+				display: none
+
+			.forms
+
+				&__input
+
+					&--textarea
+						height: auto
+						flex: 1 1 auto
+
+					&-cont
+						float: none
+						width: auto !important
+						margin: 0 !important
+
+						&--textarea
+							grid-row: 1 / 4
+							grid-column: 2
+
+.od-deliv
+
+	&__methods
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: -20px
+
+		&-item
+			margin-bottom: 20px
+
+			&:not(:last-child)
+				margin-right: 24px
+
+	&__inputs
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -20px -30px
+
+		&:not(:first-child)
+			margin: 2rem 0 -20px -30px
+
+		.forms
+
+			&__input
+
+				&-cont
+					margin: 0 0 20px 30px
+					width: calc((100% - 30px * 2) / 2)
+
+.od-radio
+	position: relative
+
+	&__input
+		position: absolute 0 * * 0
+		pointer-events: none
+		opacity: 0
+
+		&:checked
+
+			+ label
+
+				&:after
+					opacity: 1
+
+	&__label
+		cursor: pointer
+		display: block
+		background: var(--second-color)
+		padding: 16px 30px 17px 50px
+
+		&:before, &:after
+			content: ""
+			position: absolute
+			border-radius: 50%
+
+		&:before
+			background: #fff
+			size: 9px
+			top: 21px
+			left: 28px
+
+		&:after
+			background: var(--main-color)
+			size: 5px
+			top: 23px
+			left: 30px
+			opacity: 0
+			transition: opacity .3s ease
+
+
+@media screen and (max-width: 667px)
+
+	.ordering
+		flex-direction: column 
+
+		&__summary
+			display: none
+			width: 100%
+			margin: 0 0 20px 0
+
+			&.ordering__summary--mobile
+				display: block
+
+	.order-data__item:not(:first-child)
+		margin: 0.75rem 0 0
+
+	.od-person__form
+		display: flex 
+		flex-direction: column
+
+		.forms__input-cont
+			&:not(:first-child)
+				margin-top: 20px !important
+
+			&--textarea
+				order: 1
+
+	.od-deliv__inputs
+
+		.forms__input-cont
+			width: 100%
+
+
+

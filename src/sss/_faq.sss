@@ -1,0 +1,90 @@
+.faq
+
+	.text-page
+		max-width: 750px
+		
+	&__links
+		display: inline-block
+		background: var(--second-color)
+		border-radius: 20px
+		margin: 45px 0 40px
+
+		a
+			display: inline-block
+			padding: 10px 20px
+			border-radius: 20px
+			transition: background .3s ease, color .3s ease
+			line-height: 1
+
+			&.active, &:hover
+				background: var(--main-color)
+				color: #fff
+
+	&__item
+		margin-bottom: 7px
+
+		&.js__open
+			.faq__item-top
+				&:after
+					background-color: var(--main-color)
+					background-image: url('../img/ico-arrow-down-w.svg')
+					transform: rotate(180deg)
+					background-repeat: no-repeat
+					background-position: center
+
+
+
+
+		&-top
+			display: flex
+			align-items: center
+			position: relative
+			background: var(--second-color)
+			padding: 17px 30px
+			cursor: pointer
+
+			&:after
+				content: ''
+				display: inline-block
+				margin-left: auto
+				size: 42px
+				background-image: url('../img/ico-arrow-down.svg')
+				background-repeat: no-repeat
+				background-position: center
+				background-color: #fff
+				border-radius: 50%
+				transition: transform .3s ease, background .3s ease
+				flex: none
+
+			span
+				margin-right: 1.4rem
+
+
+
+		&-bot
+			display: none
+			margin: 35px 0 50px
+
+@media screen and (max-width: 1000px)
+
+	.faq__links
+		margin: 30px 0 25px
+
+
+@media screen and (max-width: 667px)
+
+	.faq
+		&__links
+			display: flex
+			flex-direction: column
+
+			.active 
+				order: 1
+
+		&__item
+			&-top
+				padding: 17px 20px
+
+
+
+

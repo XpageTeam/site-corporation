@@ -1,0 +1,140 @@
+.testemonials-v3
+	.testemonials
+
+		&__item
+			padding: 60px 
+			border: 1px solid #f8f9fb
+			display: block
+			transition: box-shadow .3s ease
+
+			&:not(:last-child)
+				margin-bottom: 30px
+
+
+			&:hover
+				box-shadow: 0px 0px 50px 8px rgba(37, 41, 77, 0.05)
+
+
+			&.js__file--open
+				.testemonials
+					&-btn
+						background: var(--main-color)
+						transform: rotate(0deg)
+
+						&:before 
+							filter: invert(0)
+
+					&-file
+						opacity: 0
+						pointer-events: none
+
+
+
+
+			&-top 
+				display: flex
+				margin-bottom: 24px 
+
+				
+
+			&-title
+				font-size: rem(18)
+				font-weight: 400
+				line-height: 26px
+				letter-spacing: 0.18px
+
+			&-subtitle
+				color: #b8becd
+				font-size: rem(14)
+				font-weight: 400
+				line-height: 22px
+				letter-spacing: 0.14px
+
+			&-date
+				color: #b8becd
+				font-size: rem(12)
+				font-weight: 400
+				line-height: 1
+				margin-left: auto
+
+			&-files
+				margin-top: 28px
+				display: none
+
+			&-file
+				padding-left: 43px
+				transition: opacity .3s ease
+
+				&:not(:first-child)
+					margin-top: 19px
+
+			&-photo
+				margin-right: 22px
+
+			&-btn
+				margin-top: 32px
+				display: flex
+				justify-content: space-between
+
+
+		&-btn
+			position: relative
+			size: 43px
+			background-color: var(--second-color)
+			border-radius: 50% 
+			transform: rotate(180deg)
+			transition: transform .3s ease, background .3s ease
+
+			&:before 
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				background: url('../img/ico-arrow-up.svg') no-repeat center
+				filter: invert(.3)
+
+		
+
+		&-file
+			size: 36px
+			background: url('../img/ico-clip.png') no-repeat center
+			background-color: var(--second-color)
+			border-radius: 50% 
+			position: relative
+
+
+@media screen and (max-width: 1200px)
+
+	.testemonials-v3
+		.testemonials__item
+			padding: 30px
+
+			&-photo
+				display: none
+				
+
+			&-top
+				flex-direction: column
+
+			&-date
+				margin: 10px 0 0 0
+
+@media screen and (max-width: 667px)
+
+	.testemonials-v3
+		.testemonials
+				
+			&__item
+				padding: 20px
+
+				&-photo
+					display: none
+					
+
+				&-top
+					flex-direction: column
+
+				&-date
+					margin: 10px 0 0 0

@@ -1,0 +1,112 @@
+.head
+	
+
+	&-address
+		padding-left: 35px
+		background: url('../img/ico-location.png') no-repeat left 0 center !important
+
+	&-phone
+		position: relative
+		background: none !important
+		margin-left: rem(45)
+		padding: 0
+		display: flex 
+		align-items: center
+
+
+		&:hover 
+			.tel
+				&-selects-wr
+					opacity: 1
+					pointer-events: all
+					z-index: 100
+
+		a 
+			background: url('../img/ico-tel.png') no-repeat left 0 center !important
+			text-decoration: none
+			color: currentColor
+			padding-left: 30px
+
+
+	&-select__select
+		opacity: 0
+
+		&.selectize-control
+			opacity: 1
+
+		.head-select__select
+			opacity: 1
+
+	.selectize-control
+		.selectize-input.input-active, .selectize-input
+			background: transparent
+
+	.selectize-input
+		color: currentColor
+	.selectize-input input
+		color: #fff
+
+	&-city
+		margin-left: auto
+
+	&-link
+		margin-left: rem(60)
+		
+
+.tel
+	&-selects
+		position: relative
+		
+		display: flex 
+		flex-direction: column
+		transition: opacity .3s ease
+		padding: 20px 0
+		border: 1px solid var(--border-color)
+		background: #fff
+
+		a 
+			padding: 10px 50px 5px 70px
+			cursor: pointer
+			position: relative
+			color: #000
+			font-size: 13px
+			background: url('../img/ico-tel-color.png') no-repeat left 30px center !important
+
+
+		&:before 
+			content: ''
+			position: absolute
+			top: -8px
+			right: 20px
+			size: 15px
+			border-left: 1px solid var(--border-color)
+			border-top: 1px solid var(--border-color)
+			transform: rotate(45deg)
+			background: #fff
+			z-index: 10
+
+		&-wr
+			position: absolute
+			left: -40px
+			top: calc(100% - 12px)
+			opacity: 0
+			padding-top: 33px
+			pointer-events: none
+
+	&-selected
+
+		a
+			display: flex 
+			align-items: center 
+			line-height: 1
+			padding: 5px 0 5px 30px
+
+			&:after 
+				content: ''
+				display: inline-block
+				margin-left: 20px
+				size: 6px
+				border-right: 1px solid #fff
+				border-bottom: 1px solid #fff
+				transform: rotate(45deg)
+			

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Корзина
+		include inc/head.pug
+		include inc/css.pug
+	body.inner
+		.mobile-menu
+		#page-wr
+			include inc/header.pug
+			#content
+
+				.title-block__cont
+					.wrapper
+						.title-block
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#" title="Главная") Главная
+									span.bread-crumbs__this(href="#") Корзина
+							.title-block__title
+								h1 Корзина
+
+				.wrapper
+					.ordering
+						.ordering__summary.ordering__summary--mobile
+							.o-summary(data-widget="sticky-holder")
+								.o-summary__title-cont 
+									.o-summary__title Ваш заказ
+									a.o-summary__change(href="#") Изменить
+								.o-summary__content
+									.o-summary__list
+										.o-summary__item
+											a.o-summary__item-title(href="#") ЖК «Подсолнухи»
+											.o-summary__item-price 
+												b 217,00 
+													i.rub ₽ 
+										.o-summary__item
+											a.o-summary__item-title(href="#") ЖК «Подсолнухи»
+											.o-summary__item-price 
+												b 151,00 
+													i.rub ₽ 
+										.o-summary__item
+											a.o-summary__item-title(href="#") ЖК «Подсолнухи»
+											.o-summary__item-price 
+												b 6 569,00 
+													i.rub ₽ 
+								.o-summary__footer
+									.o-summary__footer-title Итого:
+									.o-summary__footer-price 6 569,00 
+										i.rub ₽
+						.ordering__data
+							form(action="#")
+								.order-data
+									.order-data__item
+										.od.js__opened
+											.od__title-cont
+												.od__title Данные заказа
+											.od__content
+												.od-person
+													.od-person__notice Укажите свои контактные данные для оформления заказа или 
+														a(href="#") войдите
+														| .
+													.od-person__form
+														.forms__input-cont.forms__input-cont--textarea
+															textarea.forms__input.forms__input--textarea(tabindex="4")
+															label.forms__label Комментарий
+														.forms__input-cont
+															input.forms__input(type="text" required="" tabindex="1")
+															label.forms__label Ваше имя
+														.forms__input-cont
+															input.forms__input(type="tel" required="" tabindex="2")
+															label.forms__label Ваш телефон
+														.forms__input-cont
+															input.forms__input(type="email" required="" tabindex="3")
+															label.forms__label Ваш e-mail
+									.order-data__item
+										.od.js__opened
+											.od__title-cont
+												.od__title Доставка
+												.od__notice
+													.od__notice-popup При оформлении заказа на сумму свыше 5 000 
+														i.rub ₽
+														| , 
+														br
+														| Вы имеете возможность указать адрес доставки.
+											.od__content
+												.od-deliv
+													.od-deliv__methods
+														each label, i in ["Самовывоз", "Доставка"]
+															.od-deliv__methods-item
+																.od-radio
+																	input.od-radio__input(type="radio" name="deliv" id="d-"+i)
+																	label.od-radio__label(for="d-"+i)=label
+													.od-deliv__inputs
+														.forms__input-cont
+															input.forms__input(type="text" required="")
+															label.forms__label Город
+														.forms__input-cont
+															input.forms__input(type="text" required="")
+															label.forms__label Адрес
+														.forms__input-cont.forms__input-cont--mini
+															input.forms__input(type="text" required="")
+															label.forms__label Дом
+														.forms__input-cont.forms__input-cont--mini
+															input.forms__input(type="text" required="")
+															label.forms__label Квартира
+									.order-data__item
+										.od.js__opened
+											.od__title-cont
+												.od__title Оплата
+											.od__content
+												.od-payment
+													.od-deliv__methods
+														each label, i in ["Наличный расчет", "Безналичный расчет"]
+															.od-deliv__methods-item
+																.od-radio
+																	input.od-radio__input(type="radio" name="payment" id="p-"+i)
+																	label.od-radio__label(for="p-"+i)=label
+									.order-data__btns
+										a.btn.btn--green(href="#") Оформить заказ
+						.ordering__summary
+							.o-summary(data-widget="sticky-holder")
+								.o-summary__title-cont 
+									.o-summary__title Ваш заказ
+									a.o-summary__change(href="#") Изменить
+								.o-summary__content
+									.o-summary__list
+										.o-summary__item
+											a.o-summary__item-title(href="#") ЖК «Подсолнухи»
+											.o-summary__item-price 
+												b 217,00 
+													i.rub ₽ 
+										.o-summary__item
+											a.o-summary__item-title(href="#") ЖК «Подсолнухи»
+											.o-summary__item-price 
+												b 151,00 
+													i.rub ₽ 
+										.o-summary__item
+											a.o-summary__item-title(href="#") ЖК «Подсолнухи»
+											.o-summary__item-price 
+												b 6 569,00 
+													i.rub ₽ 
+								.o-summary__footer
+									.o-summary__footer-title Итого:
+									.o-summary__footer-price 6 569,00 
+										i.rub ₽
+
+
+
+
+
+
+			include inc/footer.pug
+		include inc/scripts.pug

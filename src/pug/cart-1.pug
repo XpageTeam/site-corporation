@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Корзина
+		include inc/head.pug
+		include inc/css.pug
+	body.inner
+		.mobile-menu
+		#page-wr
+			include inc/header.pug
+			#content
+
+				.title-block__cont
+					.wrapper
+						.title-block
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#" title="Главная") Главная
+									span.bread-crumbs__this(href="#") Корзина
+							.title-block__title
+								h1 Корзина
+
+				.wrapper
+					.cart
+						.cart-table
+							table.cart__table
+								tfoot
+									tr
+										td(colspan="3")
+											div
+												a(href="") Очистить
+										td(colspan="3").cart__price--total 
+											div
+												span Итого:
+												span 23 700 <span class="rub">₽</span>
+											
+								thead
+									tr
+										td.cart__img
+											div 
+										td.cart__title
+											div Наименование
+										td.cart__price
+											div Цена
+										td.cart__counter
+											div Количество
+										td.cart__price-total
+											div Сумма
+										td.cart__del
+											div
+											
+								tbody
+									tr
+										td.cart__img
+											div 
+												a(href="") 
+													img(src="img/photos/cart-img.jpg")
+										td.cart__title
+											div 
+												a(href="") ЖК "Подсолнухи"
+										td.cart__price(data-label="Цена / шт.")
+											div 23 700 <span class="rub">₽</span>
+										td.cart__counter(data-label="Количество")
+											.cart-counter
+												a.cart-counter__link.cat-counter__link--minus(href="#")
+												input.cart-counter__input(type="text" value="1")
+												a.cart-counter__link.cat-counter__link--plus(href="#")
+										td.cart__price-total(data-label="Стоимость")
+											div 23 700 <span class="rub">₽</span>
+										td.cart__del
+											div
+												a(href="").cart__remove
+									tr
+										td.cart__img
+											div 
+												a(href="") 
+													img(src="img/photos/cart-img.jpg")
+										td.cart__title
+											div 
+												a(href="") ЖК "Подсолнухи"
+										td.cart__price(data-label="Цена / шт.")
+											div 23 700 <span class="rub">₽</span>
+										td.cart__counter(data-label="Количество")
+											.cart-counter
+												a.cart-counter__link.cat-counter__link--minus(href="#")
+												input.cart-counter__input(type="text" value="1")
+												a.cart-counter__link.cat-counter__link--plus(href="#")
+										td.cart__price-total(data-label="Стоимость")
+											div 23 700 <span class="rub">₽</span>
+										td.cart__del
+											div
+												a(href="").cart__remove
+												
+					
+							.cart__bot
+								a(href="").btn.btn--border Продолжить покупки
+								a(href="").btn.btn--green Оформить заказ
+
+
+
+
+
+
+			include inc/footer.pug
+		include inc/scripts.pug

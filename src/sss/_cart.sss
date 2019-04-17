@@ -1,0 +1,456 @@
+.cart
+	&-cont
+		position: absolute
+		right: 0
+		top: 0
+		bottom: 0
+		display: flex
+		align-items: flex-start
+		transform: translateX(100%)
+		transition: transform .3s ease
+
+
+		&:hover
+			transform: translateX(0)
+
+	&-small
+		&-cont
+			position: relative
+			right: 0
+			top: 52px
+			bottom: 52px
+			size: 75px
+			background: var(--second-color)
+			margin-left: auto
+			display: flex
+			align-items: center
+			justify-content: center
+			cursor: pointer
+			margin-left: -75px
+
+
+	&-small
+		position: relative
+		size: 26px 24px
+		background: url('../img/ico-cart.svg') no-repeat center
+		background-size: contain
+
+		&:before
+			content: attr(data-count)
+			display: block
+			position: absolute
+			top: -12px
+			right: -12px
+			size: 23px
+			background: var(--main-color)
+			color: #fff
+			text-align: center
+			line-height: 23px
+			font-size: rem(12)
+			border-radius: 50%
+
+
+
+.cart__table
+	width: 100%
+
+	thead, tfoot
+		background: var(--second-color)
+
+	thead
+		color: #b8becd
+		font-size: rem(14)
+		div
+			padding: 20px 0
+
+	tfoot
+		div
+			padding: 20px 45px
+
+		a
+			position: relative
+
+			&:before
+				content: ''
+				display: inline-block
+				width: 10px
+				height: 10px
+				background: url(../img/ico-cros.png) no-repeat center
+				transform: rotate(45deg)
+				margin-right: 5px
+
+		.cart__price--total
+			font-size: rem(20)
+			font-weight: 600
+			text-align: right
+
+
+
+	tbody
+		td
+			vertical-align: middle
+
+		tr
+			position: relative
+
+			&:not(:first-child)
+				border-top: 1px solid var(--border-color)
+
+		.cart
+			&__img
+				padding: 30px 45px
+				width: 83px
+				box-sizing: content-box
+
+
+				img
+					display: block
+					width: 83px
+					height: auto
+					object-fit: cover
+					object-position: center
+
+			&__title
+				a
+					color: var(--main-color)
+
+			&__price
+				font-weight: 600
+				font-size: rem(20)
+				white-space: nowrap
+
+				&-total
+					font-weight: 600
+					font-size: rem(20)
+					white-space: nowrap
+			&-counter
+				margin: 0 20px
+
+			&__del
+				padding: 0 10px
+				text-align: right
+
+
+			&__remove
+				background: url('../img/ico-cros.png') no-repeat center
+				display: inline-block
+				size: 20px
+				transform: rotate(45deg)
+
+
+.cart-table
+
+	.cart__bot
+		display: flex
+		justify-content: space-between
+		padding: 37px 0
+
+		a
+			&:not(:first-child)
+				margin-left: 1.4rem
+			&:first-child
+				margin-right: auto
+
+.cart-small
+	&-info
+		width: 830px
+		background: #fff
+		box-shadow: 0px 0px 51.33px 7.67px rgba(37, 41, 77, 0.07)
+
+	&__img
+		width: 83px
+		margin-right: 35px
+
+	&__title
+		width: 210px
+		a
+			color: var(--main-color)
+
+
+	&__price
+		width: 135px
+		margin-right: 20px
+		white-space: nowrap
+
+	&__del
+		size: 20px
+		position: absolute
+		right: 6px
+		top: calc(50% - 10px)
+		display: block
+		background: url('../img/ico-cros.png') no-repeat center
+		transform: rotate(45deg)
+
+	&__top
+		padding: 20px 40px
+		font-size: rem(20)
+		font-weight: 600
+
+	&__header
+		background: #f4f6f9
+
+		.cart-small__item
+			padding: 5px 40px
+			font-size: rem(14)
+			color: #b8becd
+
+	&__list
+		font-size: rem(16)
+		font-weight: 600
+		height: 213px
+		overflow-y: auto
+
+		&::-webkit-scrollbar
+			width: 8px
+
+		&::-webkit-scrollbar-track
+			background: var(--second-color)
+
+		&::-webkit-scrollbar-thumb
+			background: var(--main-color)
+
+
+
+	&__item
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 20px 40px
+		position: relative
+
+
+		&:not(:first-child)
+			border-top: 1px solid var(--border-color)
+
+	&__el
+		text-align: left
+
+	&__middle
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 20px 40px
+		background: var(--second-color)
+
+		a
+			font-size: rem(14)
+			position: relative
+
+			&:before
+				content: ''
+				display: inline-block
+				size: 10px
+				background: url('../img/ico-cros.png') no-repeat center
+				transform: rotate(45deg)
+				margin-right: 5px
+
+
+		span
+			font-size: rem(20)
+			font-weight: 600
+
+
+	&__bot
+		display: flex
+		justify-content: space-between
+		padding: 20px 40px
+
+		a
+			&:not(:first-child)
+				margin-left: 1.4rem
+			&:first-child
+				margin-right: auto
+
+
+
+.cart-counter
+	display: flex
+	align-items: center
+	&__input
+		width: 42px
+		height: 25px
+		border: 0
+		color: #000
+		text-align: center
+		padding: 0 5px
+
+	&__link
+		position: relative
+
+		display: inline-block
+		size: 25px
+		border-radius: 50%
+		background: #f4f6f9
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			left: calc(50% - 4px)
+			background: #b8becd
+			width: 8px
+			height: 1px
+
+		&--plus
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				left: 50%
+				top: calc(50% - 4px)
+				background: #b8becd
+				width: 1px
+				height: 8px
+
+
+@media screen and (max-width: 1200px)
+
+	.cart__table tbody .cart__img 
+		padding: 30px 19px 30px 0px
+		// width: 53px
+
+@media screen and (max-width: 660px)
+
+	.cart-cont
+		display: none
+
+	.cart__table
+		display: flex
+		flex-direction: column
+
+		tfoot
+			order: 1
+			margin: 30px 0 0
+
+			tr
+				flex-direction: column
+
+			td
+
+				&:last-child
+					padding-top: 0
+
+		tbody, tfoot, td
+			display: block
+
+		thead
+			display: none
+
+		tr
+			display: flex
+			flex-wrap: wrap
+			position: relative
+
+			&:not(:first-child)
+				padding: 20px 0 0
+				margin: 20px 0 0 0
+
+			&:before
+				// content: ""
+				position: absolute 0 0 * 0
+				height: 30px
+				background: var(--secondColor)
+
+			&:first-child
+
+				.cart-table__remove
+					top: 0
+
+		tbody
+
+
+			tr:last-child
+
+				td
+					border-bottom: 1px solid var(--borderColor)
+
+	.cart
+
+		&__remove
+			position: absolute 50px 0 * *
+			padding: 0 !important
+			border: none !important
+
+			.remove
+				text-indent: 0
+				overflow: visible
+				color: var(--mainColor)
+				background: none
+				size: auto
+
+		&__img
+			width: 35%
+			padding: 0 !important
+			margin-right: 20px
+
+
+		&__name
+			width: 65%
+			padding-right: 0 !important
+			padding-top: 30px !important
+			max-width: none
+
+		&__price
+			margin-top: 20px
+			font-size: rem(14)
+
+			&--total 
+				font-size: rem(14)
+
+		&-counter
+			margin: 0 !important
+
+		&__counter
+			margin: 15px 0
+
+		&__price, &__count, &__total
+			width: 100%
+			padding-right: 0 !important
+
+		td
+			
+
+			&[data-label]
+				display: flex
+				align-items: center
+				flex: 1 1 auto
+
+				&:before
+					content: attr(data-label)
+					display: inline-block
+					padding-right: 16px
+					width: 38%
+					font-size: 16px
+					font-weight: 400
+
+
+		&__remove
+			position: static
+
+		&__del
+			position: absolute
+			top: 20px
+			right: 0
+
+		&__table tfoot
+			padding: 20px
+
+			div
+				padding: 0
+
+		&__bot
+			flex-direction: column
+			align-items: flex-start
+			padding: 37px 0 0 !important
+
+			.btn
+				&:not(:first-child)
+					margin: 20px 0 0 0 !important
+
+
+
+	.cart-item
+
+		&__img
+			width: auto

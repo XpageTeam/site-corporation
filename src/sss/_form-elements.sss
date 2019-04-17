@@ -1,0 +1,385 @@
+.popup-form
+	display: none
+	padding: rem(38) rem(47) rem(44) !important
+	width: 1190px
+
+
+
+	&__title
+		font-weight: bold
+		text-align: left
+		font-size: rem(30)
+		line-height: 1.1
+		margin-bottom: rem(24)
+		color: #fff
+		letter-spacing: .02em
+
+	&__text
+		text-align-last: auto
+		color: #666666
+
+	textarea
+		width: 100%
+		min-width: 100%
+		max-width: 100%
+
+		padding-top: 10px
+		padding-bottom: 10px
+		min-height: 95px !important
+		height: 95px
+		max-height: 200px
+
+	:-webkit-scrollbar
+		width: 12px
+
+	:-webkit-scrollbar-track
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+		border-radius: 10px
+
+	:-webkit-scrollbar-thumb
+		border-radius: 10px
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5)
+
+
+	&__content
+		margin-top: 70px
+
+	&.popup-column-2
+		max-width: 720px
+		padding: 55px 85px
+
+		.forms__input-cont
+			width: calc((100% - 30px * 2) / 2)
+			margin: 0 0 30px 30px
+
+	.forms
+		padding: 0
+
+		&__title, &__text
+			text-align: center
+
+	&.popup-column-1
+		max-width: 515px
+
+		.forms-bot
+			flex-direction: column
+
+		.forms__submit-cont
+			margin-top: 30px
+
+
+.forms-wrap
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-start
+	margin: 35px 0 -30px -30px
+
+	.forms__input-cont
+		width: 100%
+		margin: 0 0 30px 30px
+
+
+
+	&--column
+		flex-direction: column
+		margin: 0 !important
+
+		.forms
+
+			&__input-cont
+
+				&:not(:first-child)
+					margin: 18px 0 0
+
+.forms
+	padding: 60px 85px
+
+	a
+		color: var(--main-color)
+
+	&__checkbox
+		position: relative
+
+		&-input
+			position: absolute 0 * * 0
+			opacity: 0
+			pointer-events: none
+			size: 19px
+
+			&:checked
+
+				~ label
+
+					&:after
+						opacity: 1
+
+		&-label
+			cursor: pointer
+			display: flex
+			position: relative
+			user-select: none
+
+			&:before, &:after
+				content: ""
+				display: inline-block
+
+			&:before
+				flex: none
+				background: #fff
+				border: 1px solid var(--second-color)
+				margin: 0 15px 0 0
+				size: 19px
+
+			&:after
+				border: 1px solid var(--main-color)
+				border-top: none
+				border-left: none
+				size: 6px 10px
+				transform: rotateZ(45deg)
+				position: absolute 3px * * 7px
+				transition: opacity .1s ease
+				opacity: 0
+
+	&__title
+		font-size: rem(28)
+		font-weight: 600
+
+	&__text
+		color: #b8becd
+		margin-top: 25px
+
+	&__input
+		padding: 3px 20px
+		min-height: 50px
+		transition: border-color .3s ease
+		background: transparent
+		border: 1px solid var(--border-color)
+		font-size: rem(14)
+		color: #000
+
+		&:focus
+			border-color: var(--main-color)
+
+		&-cont
+			position: relative
+			display: flex
+			flex-direction: column-reverse
+
+			&--mini
+				width: calc((100% - 30px * 4) / 4) !important
+
+			&.js__input-full
+				.forms__label
+					top: -15px
+
+				.forms__label--file
+					top: -15px !important
+
+			&--textarea
+				width: 100% !important
+
+
+			&--file
+				padding-right: 25px
+				// > *
+				// 	margin-right: 25px
+
+		&[required] ~ label
+
+			&:after
+				content: "*"
+				display: inline-block
+				color: red
+
+		&--textarea
+			max-width: 100%
+			resize: none
+			min-height: 95px
+
+		&--file
+			display: none
+
+
+
+	&__label
+		flex: none
+		color: #666666
+		margin-bottom: 10px
+
+		&--file
+			width: 100%
+
+
+			&:before
+				content: ''
+				position: absolute
+				pointer-events: all
+				right: 25px
+				bottom: 0
+				cursor: pointer
+				height: 50px
+				width: 18.57%
+				text-align: right
+				line-height: 49px
+				box-sizing: border-box
+				background: url('../img/ico-clip.png') no-repeat center
+				background-color: var(--second-color)
+
+	&__error-message
+		position: absolute
+		bottom: -24px
+		left: 0
+		color: #f00
+
+	&__input_error
+		~ .forms__input--file-support
+			border-bottom-color: var(--mainColor)
+
+		~ .forms__label--file
+			color: var(--mainColor)
+
+	input[type="submit"]
+		background: var(--main-color)
+		color: #fff
+		border: 0
+		border-radius: 20px
+		padding: 10px 25px
+		line-height: 1
+
+	&-bot
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: 30px
+
+.add-input
+	position: absolute
+	right: 0
+	bottom: 0
+	width: 25px
+	height: 50px
+	cursor: pointer
+
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: url('../img/ico-cros.png') no-repeat right 0 center
+
+	~ .input-del
+		display: none
+
+.input-del
+	position: absolute
+	right: 0
+	bottom: 0
+	width: 25px
+	height: 50px
+	cursor: pointer
+
+	&:before
+		content: ''
+		position: absolute
+		top: -5px
+		left: 0
+		width: 100%
+		height: 100%
+		background: url('../img/ico-cros.png') no-repeat right 0 center
+		transform: rotate(45deg)
+
+
+
+
+
+.fancybox
+	&-close-small
+		color: #fff !important
+		height: 47px !important
+		right: 0 !important
+		top: 0 !important
+		width: 47px !important
+		svg
+			stroke-width: 2.4 !important
+
+
+@media screen and (max-width: 1500px)	
+
+	.forms
+		padding: 3rem
+
+		&__text
+			margin-top: 20px
+
+@media screen and (max-width: 1000px)
+
+	.forms
+		padding: 2rem
+
+		&-wrap 
+			.forms__input-cont
+				margin: 0 0 15px 30px
+
+@media screen and (max-width: 667px)
+
+	.forms
+		padding: 20px
+
+		&__title
+			font-size: 1.4rem
+
+		&__text
+			margin-top: 10px
+
+		&-wrap
+			margin: 20px 0 -30px -30px
+
+		&__label
+			margin-bottom: 5px
+
+		&__input
+			min-height: 40px
+
+		&__label--file
+			&:before
+				height: 40px
+
+		&-bot
+			flex-direction: column
+			align-items: flex-start
+
+		&__submit-cont
+			margin-top: 20px
+
+
+	.add-input
+		height: 40px
+
+	.fancybox-active
+		#content, header, footer 
+			display: none
+
+	.fancybox-slide--html
+		padding: 0 !important
+		background: #fff
+
+	.fancybox-slide::before
+		display: none
+
+	.fancybox-slide--html .fancybox-content
+		margin-bottom: 0 !important
+
+
+	.popup-form
+		padding: 20px !important
+		width: 100%
+
+		&.popup-column-2 .forms__input-cont
+			width: 100%
+			margin: 0 0 30px 30px
+
+	.forms__input-cont--mini
+		width: calc((100% - 30px * 2) / 2) !important
+

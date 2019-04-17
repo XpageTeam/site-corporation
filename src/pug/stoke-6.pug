@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Акции v6
+		include inc/head.pug
+		include inc/css.pug
+	body.inner
+		.mobile-menu
+		#page-wr
+			include inc/header.pug
+			#content
+
+				.cart-cont
+					a(href="#").cart-small-cont
+						.cart-small(data-count="2")
+
+				.title-block__cont
+					.wrapper
+						.title-block
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#" title="Главная") Главная
+									span.bread-crumbs__this(href="#") Акции
+							.title-block__title
+								h1 Акции
+
+				.wrapper
+					.stoke__cont
+						.stoke-filter__cont
+							.stoke-filter
+								a(href="").stoke-filter__item.active Действущие
+								a(href="").stoke-filter__item Все
+
+						.stoke-v6
+							.stoke__list
+								- for (var i = 0; i < 9; i++)
+									a(href="#").stoke__item
+										figure.stoke__item-img
+											img(src="img/photos/stoke-v6.jpg")
+										.stoke__item-info
+											.stoke__item-info-title  Специальное предложение на оконные системы
+											.stoke__item-info-dop Только с 19 апреля по 02 мая 2018 г. в розничных магазинах NAME COMPANY акция<br> 3=2 на детскую коллекцию! Условия акции: при покупке двух вещей<br> для детей - третья ...
+											.date.date--orange до 01.06.2018
+											.stoke__item-info-btn
+
+
+							include inc/paginator.pug
+
+
+
+
+
+			include inc/footer.pug
+		include inc/scripts.pug

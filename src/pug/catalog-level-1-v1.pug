@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Каталог ур.1 v1
+		include inc/head.pug
+		include inc/css.pug
+	body.inner
+		.mobile-menu
+		#page-wr
+			include inc/header.pug
+			#content
+
+				.cart-cont
+					.cart-small-cont
+						.cart-small(data-count="2")
+					.cart-small-info
+						.cart-small__top Корзина
+						.cart-small__header
+							.cart-small__item
+								.cart-small__el.cart-small__img
+								.cart-small__el.cart-small__title Наименование
+								.cart-small__el.cart-small__price Цена
+								.cart-small__el.cart-small__counter Количество
+								.cart-small__el.cart-small__price-total Сумма
+						.cart-small__list
+							.cart-small__item
+								.cart-small__el.cart-small__img
+									img(src="img/photos/cart-img.jpg")
+								.cart-small__el.cart-small__title
+									a(href="") ЖК "Подсолнухи"
+								.cart-small__el.cart-small__price 23 700 <span class="rub">₽</span>
+								.cart-small__el.cart-small__counter
+									.cart-counter
+										a.cart-counter__link.cat-counter__link--minus(href="#")
+										input.cart-counter__input(type="text" value="1")
+										a.cart-counter__link.cat-counter__link--plus(href="#")
+								.cart-small__el.cart-small__price-total 23 700 <span class="rub">₽</span>
+								.cart-small__del
+							.cart-small__item
+								.cart-small__el.cart-small__img
+									img(src="img/photos/cart-img.jpg")
+								.cart-small__el.cart-small__title
+									a(href="") ЖК "Подсолнухи"
+								.cart-small__el.cart-small__price 23 700 <span class="rub">₽</span>
+								.cart-small__el.cart-small__counter
+									.cart-counter
+										a.cart-counter__link.cat-counter__link--minus(href="#")
+										input.cart-counter__input(type="text" value="1")
+										a.cart-counter__link.cat-counter__link--plus(href="#")
+								.cart-small__el.cart-small__price-total 23 700 <span class="rub">₽</span>
+								.cart-small__del
+						.cart-small__middle
+							a(href="") Очистить
+							.cart-small__price--total 
+								span Итого:&nbsp;
+								span 23 700 <span class="rub">₽</span>
+						.cart-small__bot
+							a(href="").btn.btn--green Продолжить покупки
+							a(href="").btn.btn--border Перейти в корзину
+							a(href="").btn.btn--green Оформить заказ
+
+				.title-block__cont
+					.wrapper
+						.title-block
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#" title="Главная") Главная
+									span.bread-crumbs__this(href="#") Каталог
+							.title-block__title
+								h1 Каталог
+
+				.wrapper 
+					.catalog-one-v-1
+						.catalog-list
+							- for (var i = 0; i < 9; i++)
+								a(href="").catalog-item.wow
+									figure.catalog-item__img
+										img(src="img/photos/catalog-one-v-1.jpg", alt="")
+									.catalog-item__info
+										.catalog-item__title Дома из клееного<br> бруса
+										.catalog-item__text 6 товаров
+
+
+					
+					
+
+
+
+			include inc/footer.pug
+		include inc/scripts.pug

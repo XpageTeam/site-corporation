@@ -1,0 +1,48 @@
+.catalog-services-v-1
+	.catalog
+		&-list
+			display: flex 
+			flex-wrap: wrap
+			margin: 0 0 -30px -30px
+
+		&-item 
+			width: calc((100% - 30px * 4) / 4)
+			margin: 0 0 30px 30px
+			transition: box-shadow .4s ease
+
+			&:hover
+				box-shadow: 0 0 50px 8px rgba(37, 41, 77, 0.05)
+
+
+			img 
+				display: block
+
+			&__info 
+				border: 1px solid var(--border-color)
+				border-top: 0
+				padding: 29px 1.4rem 37px
+				text-align: center
+
+			&__title 
+				font-size: rem(18)
+				line-height: 26px
+
+@media screen and (max-width: 1000px)
+
+	.catalog-services-v-1
+		.catalog-item
+			width: calc((100% - 30px * 3) / 3)
+		
+@media screen and (max-width: 660px)
+
+	.catalog-services-v-1
+		.catalog
+			&-list 
+				margin: 0 0 -30px 0
+
+			&-item
+				width: 100%
+				margin: 0 0 30px 0
+
+				img
+					width: 100%

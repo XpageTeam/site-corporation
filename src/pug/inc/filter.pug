@@ -1,0 +1,18 @@
+.catalog-filter
+	form(action="")
+		.filter
+			.filter__item
+				label(for="").filter__label Сортировать по:  
+				select.filter__input
+					option(value="1") популярности
+					option(value="2") рейтингу
+			.filter__item
+				label(for="").filter__label Показать:  
+				select.filter__input
+					option(value="1") 8 шт.
+					option(value="2") 16 шт.
+					option(value="3") 32 шт.
+			.filter-type-grid
+				a(href="#").type-item.type-plate.active
+				a(href="#").type-item.type-row
+				a(href="#").type-item.type-list

@@ -1,0 +1,28 @@
+.soc
+	display: flex
+	flex-wrap: wrap
+	
+	&__link
+		display: flex 
+		align-items: center
+		justify-content: center
+		border-radius: 50%
+		size: 42px
+		background-color: #e4e8f0
+		transition: background .3s ease, filter .3s ease
+
+
+		img 
+			filter: invert(.5)
+
+		&:not(:last-child)
+			margin-right: 11px
+
+
+
+
+		&:hover, &:focus
+			background-color: var(--main-color)
+
+			img 
+				filter: invert(0)

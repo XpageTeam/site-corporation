@@ -1,0 +1,99 @@
+.title-block
+
+	&__cont
+		padding: 43px 0
+
+	&__title
+		position: relative
+		padding-left: 23px
+
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 3px
+			left: 0
+			size: 3px 17px
+			background: var(--main-color)
+
+		h1
+			font-size: rem(25)
+			font-weight: bold
+			line-height: 1
+
+
+	&__crumbs
+		margin-bottom: 17px
+
+.bread-crumbs
+	font-size: rem(14)
+
+	ul
+
+		display: flex
+		justify-content: center
+		text-align: center
+		color: #666
+
+	&__link
+		margin-right: 15px
+		position: relative
+		color: #909ab0
+		padding-right: 28px
+
+		&:hover
+			color: var(--mainColor)
+
+		&:after
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 50%
+			right: 0
+			padding-left: 10px
+			width: 10px
+			height: 1px
+			background: #909ab0
+
+
+	&__this
+		color: var(--main-color)
+
+
+@media screen and (max-width: 1000px)
+
+	.title-block__cont
+		padding: 1.4rem 0
+
+	.bread-crumbs
+		&__this
+			display: none
+
+		&__link
+			&:not(:nth-last-child(2))
+				display: none
+
+
+			display: flex
+			align-items: center
+
+			&:after
+				display: none
+			&:before
+				content: ''
+				display: inline-block
+				margin-right: 6px
+				size: 6px
+				border-top: 1px solid #909ab0
+				border-left: 1px solid #909ab0
+				transform: rotate(-45deg)
+@media screen and (max-width: 667px)
+
+	.title-block
+		&__title 
+			padding-left: 13px
+			
+			h1
+				font-size: 1.2rem
+

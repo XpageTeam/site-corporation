@@ -1,0 +1,770 @@
+@import "../css/common.css"
+
+@import "_vars.sss"
+@import "_base.sss"
+@import "_form-elements.sss"
+@import "../css/swiper.css"
+@import "selectize/dist/css/selectize.default.css"
+@import "slick-carousel/slick/slick.css"
+
+// @import "_selectize.sss"
+@import "_breadcrumbs.sss"
+
+@import "_head-top.sss"
+@import "_main-slider.sss"
+@import "_main-menu.sss"
+@import "_main-about.sss"
+@import "_slider-one.sss"
+@import "_slider-row-two.sss"
+@import "_slider-four-photo.sss"
+@import "_slider-tovar.sss"
+@import "_slider-two.sss"
+@import "_slider-four-no-photo.sss"
+@import "_slider-testemonials.sss"
+@import "_slider-partners.sss"
+@import "_soc.sss"
+@import "_footer.sss"
+@import "_catalog-one-v-1.sss"
+@import "_catalog-one-v-2.sss"
+@import "_catalog-one-v-3.sss"
+@import "_catalog-one-v-4.sss"
+@import "_catalog-two-v-1.sss"
+@import "_catalog-two-v-2.sss"
+@import "_catalog-two-v-3.sss"
+@import "_catalog-two-v-4.sss"
+@import "_catalog-two-v-5.sss"
+@import "_catalog-two-v-6.sss"
+@import "_catalog-two-v-7.sss"
+@import "_catalog-two-v-8.sss"
+@import "_catalog-filter.sss"
+@import "_catalog-filter-left.sss"
+@import "_catalog-services-v-1.sss"
+@import "_catalog-services-v-2.sss"
+@import "_catalog-services-v-3.sss"
+@import "_catalog-services-v-4.sss"
+@import "_card.sss"
+@import "_tabs.sss"
+@import "_question.sss"
+@import "_faq.sss"
+@import "_question-ask.sss"
+@import "_stoke-filter.sss"
+@import "_stoke-v1.sss"
+@import "_stoke-v2.sss"
+@import "_stoke-v3.sss"
+@import "_stoke-v4.sss"
+@import "_stoke-v5.sss"
+@import "_stoke-v6.sss"
+@import "_stoke-v7.sss"
+@import "_stoke-v8.sss"
+@import "_stoke-v9.sss"
+@import "_news-v1.sss"
+@import "_news-v2.sss"
+@import "_news-v3.sss"
+@import "_news-v4.sss"
+@import "_news-v5.sss"
+@import "_news-v6.sss"
+@import "_news-v7.sss"
+@import "_news-v8.sss"
+@import "_news-v9.sss"
+@import "_testemonials-v1.sss"
+@import "_testemonials-v2.sss"
+@import "_testemonials-v3.sss"
+@import "_testemonials-v4.sss"
+@import "_gallery-v1.sss"
+@import "_gallery-v2.sss"
+@import "_gallery-v3.sss"
+@import "_contacts-v1.sss"
+@import "_contacts-v2.sss"
+@import "_contacts-v3.sss"
+@import "_contacts-v4.sss"
+@import "_contacts-v5.sss"
+@import "_contacts-v6.sss"
+@import "_contacts-v7.sss"
+@import "_cart.sss"
+@import "_ordering.sss"
+
+.contacts
+	&-map--full
+		position: relative
+		margin-bottom: -72px
+		padding-top: 72px
+
+
+	&__cities
+		display: flex
+		justify-content: flex-start
+		margin-bottom: 50px
+
+		.city
+			&__links
+				display: flex
+				background: var(--second-color)
+				border-radius: 20px
+
+			&__link
+				display: block
+				padding: 7px 15px
+				line-height: 1
+
+				&.active, &:hover
+					background: var(--main-color)
+					color: #fff
+					border-radius: 20px
+.catalog
+	display: flex
+
+	&__cont
+		width: calc(100% - 300px)
+.stoke__cont
+	position: relative
+
+.catalog-filter--left
+	width: 270px
+
+.paginator
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-top: 55px
+
+	a
+		position: relative
+		size: 35px
+		border-radius: 50%
+		transition: background .3s ease, color .3s ease
+		color: #000
+		text-decoration: none
+		display: flex
+		align-items: center
+		justify-content: center
+
+
+		&:hover
+			background: var(--main-color)
+			color: #fff
+
+	li
+		&:first-child, &:last-child
+			a
+
+				&:before
+					content: ''
+					display: block
+					position: absolute
+					size: 8px
+					top: calc(50% - 4px)
+					left: calc(50% - 6px)
+					border-top: 1px solid #000
+					border-right: 1px solid #000
+					transform: rotate(45deg)
+					transition: border-color .3s ease
+
+				&:hover
+					&:before
+						border-color: #fff
+
+		&:first-child
+			transform: rotate(-180deg)
+
+		&.active
+
+			a
+				background: var(--main-color)
+				color: #fff
+
+				&:before
+					border-color: #fff
+
+
+
+.slick-list, .slick-track
+	min-width: 100%
+
+.slick-slide
+	max-width: 100% !important
+
+.burger
+	display: none
+
+.inner
+	.head
+		color: #000
+
+		&-top, &-bot
+			border-bottom: 1px solid #eceff4
+
+	.logo-main
+		display: none
+
+	#content
+		margin-bottom: 72px
+
+	.burger
+		span
+			background: #000
+
+			&:before, &:after 
+				background: #000
+
+	&.js__menu--open 
+		.burger 
+			> span
+				&:before, &:after
+					background: #000
+
+
+
+.main
+	.head
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		color: #fff
+
+		&-top
+			border-bottom: 1px solid rgba(255,255,255, .15)
+
+	.logo-inner
+		display: none
+
+
+.head
+	font-size: rem(13)
+	z-index: 15
+	color: #000
+
+
+	&-top
+
+		&-cont
+			display: flex
+
+	&-bot
+		&-cont
+			display: flex
+			justify-content: space-between
+
+	&-top
+		padding: 13px 0 7px
+
+	&-bot
+		padding: 20px 0
+
+	&-cont
+		max-width: 1170px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 13px 0 11px
+
+
+
+.btn
+	background: var(--second-color)
+	color: #000
+	text-decoration: none
+	border-radius: 30px
+	padding: 10px 23px
+	line-height: 1
+	display: inline-block
+	font-weight: 400
+	transition: background .4s ease, color .4s ease
+	white-space: nowrap
+	cursor: pointer
+	border: 1px solid transparent
+
+	&--green
+		background: var(--main-color)
+		color: #fff
+
+	&--border
+		background: #fff
+		border: 1px solid var(--main-color)
+
+	&:hover
+		background: var(--main-color)
+		color: #fff
+
+	&-circle
+		position: relative
+		display: block
+		flex: none
+		size: 43px
+		border-radius: 50%
+		transition: background .4s ease
+		overflow: hidden
+		background-color: var(--second-color)
+		cursor: pointer
+
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			display: block
+			background: url("../img/ico-arrow.png") no-repeat center
+
+.main
+	.btn
+		background: var(--main-color)
+		color: #fff
+
+
+
+
+
+.selectize-control.single .selectize-input input
+	display: none !important
+
+.selectize
+	&-input
+		position: relative
+		border: 0
+		box-shadow: none !important
+		border: 0 !important
+		background: transparent !important
+
+		> input
+			display: none !important
+
+		&:after
+			display: none !important
+
+
+		.item
+			padding-right: 40px
+			cursor: pointer !important
+
+			&:after
+				content: ''
+				position: absolute
+				display: block
+				right: 25px
+				top: calc(50% - 3px)
+				size: 6px
+				border-right: 1px solid currentColor
+				border-bottom: 1px solid currentColor
+				transform: rotate(45deg)
+
+
+
+		input[type=text]
+			display: none !important
+
+
+		&.dropdown-active
+			bottom: 0
+			box-shadow: none
+
+			&:before
+				display: none
+
+
+		&.focus
+			box-shadow: none
+
+	&-dropdown
+		border: 0 !important
+		box-shadow: none
+		width: auto !important
+		margin: 0 !important
+		z-index: 11
+
+		.option
+			padding: 7px 20px
+
+
+
+
+
+	&-control
+
+
+		&.single
+			.selectize-input
+				&:after
+					display: none
+
+				&.input-active, &__selectize-input
+					display: block
+
+
+
+
+
+
+
+
+.ico
+	&-sale, &-info
+		position: absolute
+		top: 27px
+		left: 31px
+		border-radius: 3px
+		color: #fff
+		padding: 6px 14px
+		line-height: 1
+		font-size: 14px
+
+	&-sale
+		background: #3b88df
+
+	&-info
+		background: var(--main-color)
+
+	&-jpg
+		background: url('../img/ico-jpg.png') no-repeat left top
+
+	&-cart
+		position: relative
+		background: var(--second-color) !important
+		transition: background .3s ease
+		cursor: pointer
+
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: url('../img/ico-cart.svg') no-repeat center !important
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: url('../img/ico-cart-white.svg') no-repeat center !important
+			opacity: 0
+			transition: opacity .3s ease
+
+		&:hover
+
+			&:after
+				opacity: 1
+
+			&:before
+				opacity: 0
+	&-zoom, &-download
+		size: 42px
+		background-color: var(--second-color)
+		border-radius: 50%
+		background-repeat: no-repeat
+		background-position: center
+
+	&-zoom
+		background-image: url('../img/ico-zoom.png')
+
+	&-download
+		background-image: url('../img/ico-download.png')
+
+
+
+
+
+
+.date
+	font-size: 12px
+	border-radius: 13px
+	color: #b8becd
+	padding: 4px 13px
+	background: var(--second-color)
+
+	&--orange
+		background-color: #ee9859
+		color: #fff
+		// margin-top: 25px
+
+.file
+	&-weight
+		color: #b8becd
+		font-size: rem(12)
+
+
+.slider
+	padding: 70px 0
+
+	&-arrow
+		display: flex
+		height: 40px
+
+	.title
+		position: relative
+		font-size: rem(25)
+		font-weight: 700
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 25px
+
+		span
+			position: relative
+			padding-left: 24px
+			line-height: 1
+
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: calc(50% - 9px)
+				height: 18px
+				width: 3px
+				background: var(--main-color)
+				display: block
+
+		.btn
+			font-size: rem(16)
+			margin-left: auto
+			margin-right: 70px
+
+		.slick
+			&-arrow
+				position: relative
+
+				size: 40px
+				border-radius: 50%
+				font-size: 0
+				background: var(--second-color)
+				border: 0
+				transition: background .3s ease
+
+
+				&:before
+					content: ''
+					display: block
+					size: 8px
+					position: absolute
+					top: calc(50% - 4px)
+					left: calc(50% - 4px)
+					border-top: 1px solid #737374
+					border-right: 1px solid #737374
+					transform: rotate(45deg)
+					transition: border-color .3s ease
+
+				&:hover
+					background: var(--main-color)
+
+					&:before
+						border-top: 1px solid #fff
+						border-right: 1px solid #fff
+
+			&-next
+				margin-left: 18px
+
+			&-prev
+				transform: rotate(-180deg)
+
+	.slick
+		&-list
+			margin: 0 -15px
+
+	.title
+		margin-bottom: 35px
+
+
+
+
+.new
+
+	.slider-block__item
+		display: flex
+		flex-direction: row
+
+
+.burger
+	position: absolute
+	top: 17px
+	right: 1.4rem
+	z-index: 100
+	display: none
+	justify-content: center
+	align-items: center
+	box-sizing: content-box
+	width: 35px
+	height: 30px
+	padding: 15px
+	background: 0 0
+	border: 0
+	user-select: none
+	margin: -15px
+	&:before
+		display: none
+	span
+		position: relative
+		display: inline-block
+		width: 30px
+		height: 2px
+		vertical-align: bottom
+		background: #fff
+		transition: background .2s .4s
+		&:before
+			border-radius: 0
+			transform: none
+			content: ""
+			position: absolute
+			left: 0
+			top: 8px
+			width: 100%
+			height: 2px
+			background: #fff
+			transform-origin: 50% 50%
+			transition: top .3s .3s,transform .3s
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			top: -8px
+			width: 100%
+			height: 2px
+			background: #fff
+			transform-origin: 50% 50%
+			transition: top .3s .3s,transform .3s
+
+.js__menu--open
+	.burger
+		> span
+			background: 0 0
+
+			&:before
+				transform: rotate3d(0,0,1,45deg)
+				top: 0
+				transition: top .3s,transform .3s .5s
+
+			&:after
+				transform: rotate3d(0,0,1,-45deg)
+				top: 0
+				transition: top .3s,transform .3s .5s
+
+			&:before, &:after
+				background: #fff
+
+@media screen and (max-width: 1300px)
+
+	.slider
+		padding: 45px 0
+
+		.title
+			margin-bottom: 25px
+
+@media screen and (max-width: 1200px)
+
+	.burger
+		display: flex !important
+
+	.head-top, .main-menu
+		display: none
+
+	.ico
+		&-sale, &-info
+			top: 21px
+			left: 21px
+
+	.contacts-map--full
+		padding-top: 50px
+
+
+	.cart-cont
+		display: none
+
+
+@media screen and (max-width: 1000px)
+
+	.wrapper
+		padding: 0 20px
+		box-sizing: border-box
+		max-width: 100%
+
+	.slider
+		padding: 2rem 0
+
+		.title .btn
+			margin-right: 30px
+
+	.paginator
+		margin-top: 30px
+
+	.inner #content
+		margin-bottom: 30px
+
+	.catalog
+		flex-direction: column
+
+		&__cont
+			width: 100%
+
+		&-filter--left
+			width: 100%
+			margin-right: 0
+
+	.contacts-map--full
+		margin-bottom: -37px
+
+
+
+
+@media screen and (max-width: 667px)
+
+	.main-logo
+		max-width: 125px
+
+	.slider
+		.title
+			font-size: 1.3rem
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+
+			span
+				padding-left: 10px
+
+		&:not(.slider-partners, .slider-one, .slider-row-two)
+
+			.title
+				span
+					width: 100%
+					margin-bottom: 25px
+
+				.btn
+					margin-left: 0
+
+				.slider-arrow
+					margin-left: auto
+
+			// .slick-list, .slick-slide
+			// 	margin: 0 !important
+
+	.contacts-map--full
+		padding-top: 30px
+		height: 350px
+
+	.contacts__cities 
+		margin-bottom: 30px
+
+		.city__links
+			flex-direction: column
+			width: 100%
+
+			.active 
+				order: 1
+
+@media screen and (max-width: 370px)
+
+	.btn
+		padding: 7px 15px
+
+	.slider 
+		.title 
+			.slick-arrow
+				width: 30px
+				height: 30px
+			.slick-next
+				margin-left: 10px
+
+	.slider-arrow
+		align-items: center
+

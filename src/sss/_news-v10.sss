@@ -1,0 +1,123 @@
+.news-v9
+	.news
+
+		&__list
+			display: flex
+			flex-wrap: wrap
+			margin: 0 0 -30px -30px
+
+		&__btn
+			display: flex
+			justify-content: center
+			margin-top: 53px
+
+		.slick
+			&-list
+				margin: 0 -15px
+
+			&-track
+				display: flex
+
+
+
+		&__item
+			display: flex
+			text-decoration: none
+			color: #000
+			transition: box-shadow .5s ease
+			border: 1px solid #f6f7fa
+			width: 100%
+			margin: 0 0 30px 30px
+
+			&:hover
+				box-shadow: 0px 0px 51.33px 7.67px rgba(37, 41, 77, 0.05)
+
+				// .news__item-info-btn
+				// 	background: var(--main-color)
+
+			.date
+				margin-top: 20px
+
+			&-bot
+				width: 100%
+				display: flex
+				justify-content: space-between
+				align-items: center
+
+
+
+			&-img
+				position: relative
+				margin: 0 !important
+				flex: none
+
+				img
+					display: block
+
+			&-info
+				position: relative
+				display: flex
+				flex-direction: column
+				flex: 1 1 auto
+				padding: 32px 40px 32px 55px
+				align-items: flex-start
+
+				&-date
+					font-size: 12px
+					border-radius: 13px
+					background-color: var(--second-color)
+					padding: 4px 13px
+					color: #000
+					margin-top: 25px
+
+					&.date--orange
+						background-color: #ee9859
+						color: #fff
+
+
+
+
+
+				&-title
+					font-size: rem(18)
+					margin-bottom: 13px
+
+				&-dop
+					color: #bdc2cf
+					font-size: rem(14)
+					margin-bottom: 15px
+					max-width: 550px
+
+				&-price
+					font-size: rem(24)
+					margin-top: 21px
+
+					&--sale
+						position: relative
+						font-size: rem(14)
+						color: #b7b7b7
+						margin-top: 5px
+						padding-left: 5px
+						display: flex
+						justify-content: flex-start
+
+						&:before
+							content: ''
+							position: absolute
+							display: block
+							top: 50%
+							left: 0
+							width: 100%
+							height: 1px
+							background: #b7b7b7
+
+				&-btn
+					display: block
+					right: 30px
+					bottom: 30px
+					size: 43px
+					border-radius: 50%
+					background: url('../img/ico-arrow.png') no-repeat center, #f8f9fb
+					position: absolute
+					right: 1.4rem
+					bottom: 1.4rem

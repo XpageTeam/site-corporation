@@ -1,0 +1,34 @@
+.stoke-filter
+	background: var(--second-color)
+	border-radius: 20px
+	position: absolute
+	right: 0
+	top: -70px
+
+	&__cont
+		display: flex
+		justify-content: flex-end
+
+	&__item
+		padding: 5px 15px
+		display: inline-block
+		border-radius: 20px
+
+		&:hover
+			background: var(--main-color)
+			color: #fff
+
+		&.active
+			background: var(--main-color)
+			color: #fff
+
+@media screen and (max-width: 667px)
+
+	.stoke-filter
+		position: relative
+		top: initial
+		
+		&__cont
+			margin-bottom: 20px
+
+

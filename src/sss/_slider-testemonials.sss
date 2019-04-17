@@ -1,0 +1,263 @@
+.slider-testemonials
+	.slider
+
+
+		&-block
+
+			&__info
+				text-align: left
+				max-width: 405px
+
+				&__title
+					font-size: rem(23)
+					color: var(--main-color)
+					margin-bottom: 12px
+
+				&__text
+					margin-bottom: 35px
+					line-height: 1.5
+
+	.slick
+		&-slide
+			margin: 15px
+
+		&-list
+			margin: -15px
+
+	.testemonials
+		&__item
+			padding: 60px
+			border: 1px solid #f8f9fb
+
+			&.js__file--open
+				.testemonials
+					&-btn
+						background: var(--main-color)
+						transform: rotate(0deg)
+
+						&:before
+							filter: invert(0)
+
+					&-file
+						opacity: 0
+						pointer-events: none
+
+
+
+
+			&-top
+				display: flex
+				margin-bottom: 24px
+
+
+
+			&-title
+				font-size: rem(18)
+				font-weight: 400
+				line-height: 26px
+				letter-spacing: 0.18px
+
+			&-subtitle
+				color: #b8becd
+				font-size: rem(14)
+				font-weight: 400
+				line-height: 22px
+				letter-spacing: 0.14px
+
+			&-date
+				color: #b8becd
+				font-size: rem(12)
+				font-weight: 400
+				line-height: 1
+				margin-left: auto
+
+			&-files
+				margin-top: 28px
+				display: none
+
+			&-file
+				padding-left: 43px
+				transition: opacity .3s ease
+
+				&:not(:first-child)
+					margin-top: 19px
+
+			&-photo
+				margin-right: 22px
+
+			&-btn
+				margin-top: 32px
+				display: flex
+				justify-content: space-between
+
+
+		&-btn
+			position: relative
+			size: 43px
+			background-color: var(--second-color)
+			border-radius: 50%
+			transform: rotate(180deg)
+			transition: transform .3s ease, background .3s ease
+
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				background: url('../img/ico-arrow-up.svg') no-repeat center
+				filter: invert(.3)
+
+			// &:before
+			// 	content: ''
+			// 	position: absolute
+			// 	top: 15px
+			// 	left: calc(50% - 3px)
+
+			// 	size: 6px
+			// 	border-top: 1px solid #b0b2b4
+			// 	border-right: 1px solid #b0b2b4
+			// 	transform: rotate(-45deg)
+
+			// &:after
+			// 	content: ''
+			// 	position: absolute
+			// 	top: 15px
+			// 	left: 50%
+			// 	width: 1px
+			// 	height: 15px
+			// 	background: #b0b2b4
+
+		&-file
+			size: 36px
+			background: url('../img/ico-clip.png') no-repeat center
+			background-color: var(--second-color)
+			border-radius: 50%
+			position: relative
+
+	.slider-block
+
+		&__btn
+			display: flex
+			justify-content: center
+			margin-top: 53px
+
+		.slick
+			&-list
+				margin: 0 -15px
+
+			&-track
+				display: flex
+
+		&__column
+			display: flex
+			flex-direction: column
+			margin: 0 15px
+			max-width: 245px
+
+		&__item
+			display: flex
+			flex-direction: column
+			flex: 1 1 auto
+			text-decoration: none
+			color: #000
+			transition: box-shadow .5s ease
+			border: 1px solid #f6f7fa
+
+			&:nth-child(2)
+				margin-top: 27px
+
+			&:hover
+				box-shadow: 0px 0px 51.33px 7.67px rgba(37, 41, 77, 0.05)
+
+
+			&-img
+				position: relative
+				margin: 0 !important
+
+			&-info
+				position: relative
+				display: flex
+				flex-direction: column
+				flex: 1 1 auto
+				padding: 27px 33px 40px
+				align-items: flex-start
+
+
+		&__info
+
+			&-title
+				font-size: rem(18)
+				margin-bottom: 13px
+
+			&-dop
+				color: #bdc2cf
+				font-size: rem(14)
+
+			&-price
+				font-size: rem(24)
+				margin-top: 21px
+
+				&--sale
+					position: relative
+					font-size: rem(14)
+					color: #b7b7b7
+					margin-top: 5px
+					padding-left: 5px
+					display: flex
+					justify-content: flex-start
+
+					&:before
+						content: ''
+						position: absolute
+						display: block
+						top: 50%
+						left: 0
+						width: 100%
+						height: 1px
+						background: #b7b7b7
+
+			&-btn
+				display: block
+				right: 30px
+				bottom: 30px
+				size: 43px
+				border-radius: 50%
+				background: url('../img/ico-arrow.png') no-repeat center, #f8f9fb
+				position: absolute
+				right: 1.4rem
+				bottom: 1.4rem
+
+@media screen and (max-width: 1300px)
+
+	.slider-testemonials
+		.testemonials
+			&__item
+				padding: 45px
+
+				&-btn
+					margin-top: 20px
+
+
+@media screen and (max-width: 1000px)
+
+	.slider-testemonials
+		.testemonials__item
+			padding: 1.4rem
+
+
+@media screen and (max-width: 660px)
+
+	.slider-testemonials
+		.testemonials__item
+			&-photo
+				margin-right: 15px
+				display: none
+
+			&-top
+				flex-wrap: wrap
+
+			&-date
+				width: 100%
+				margin-top: 10px

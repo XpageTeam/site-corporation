@@ -1,0 +1,83 @@
+.slider-partners
+	padding: 40px 0 85px !important
+	background: var(--second-color)
+
+	.title
+		position: relative
+		font-size: rem(25)
+		font-weight: 700
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 75px !important
+
+		span
+			position: relative
+			padding-left: 24px
+			line-height: 1
+
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: calc(50% - 9px)
+				height: 18px
+				width: 3px
+				background: var(--main-color)
+				display: block
+
+		.btn
+			font-size: rem(16)
+			margin-left: auto
+			margin-right: 70px
+
+
+
+		.slick
+			&-arrow
+				position: relative
+
+				size: 40px
+				border-radius: 50%
+				font-size: 0
+				background: #fff !important
+				border: 0
+				transition: background .3s ease
+
+
+
+				&:hover
+					background: var(--main-color) !important
+
+
+
+
+			&-next
+				margin-left: 18px
+
+			&-prev
+				transform: rotate(-180deg)
+
+
+	.partners
+		&__item
+
+			display: flex !important
+			justify-content: center
+			filter: grayscale(100%)
+			transition: filter .3s ease
+
+			&:hover
+				filter: grayscale(0)
+
+
+@media screen and (max-width: 1300px)
+
+	.slider-partners
+		.title
+			margin-bottom: 50px !important
+
+@media screen and (max-width: 1000px)
+
+	.slider-partners
+		padding: 2rem 0 3rem !important

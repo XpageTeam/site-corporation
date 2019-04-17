@@ -1,0 +1,38 @@
+.tabs
+	&-content
+		display: none
+		width: 100%
+
+		&.active 
+			display: block
+
+	&__top
+		display: flex
+		background: var(--second-color)
+		border-radius: 20px
+		margin-bottom: 35px
+
+	&-tab 
+		padding: 13px 20px 
+		border-radius: 20px
+		line-height: 1
+		cursor: pointer
+
+		&.active 
+			background: var(--main-color)
+			color: #fff
+
+
+
+@media screen and (max-width: 667px)
+	.tabs
+		&__top
+			flex-direction: column
+			width: 100%
+			margin-bottom: 20px
+
+		&-tab 
+			&.active 
+				order: 1
+
+

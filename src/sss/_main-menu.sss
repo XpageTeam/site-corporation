@@ -1,0 +1,262 @@
+.main-menu
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+	&-cont
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		z-index: 10
+
+.nav
+	&__list
+		display: flex
+		align-items: center
+
+	&__link
+		text-decoration: none
+		color: currentColor
+		padding: 35px 25px
+		transition: color .3s ease
+		font-size: rem(16)
+
+		&:hover
+			color: var(--main-color)
+
+	&__item
+		position: relative
+
+		&.active
+			> a
+				color: var(--main-color)
+
+
+		&.js__has-menu
+
+			> a 
+				position: relative
+
+				&:after
+					content: ''
+					position: absolute
+					right: 0
+					top: calc(50% - 3px)
+					size: 6px
+					border-right: 1px solid currentColor
+					border-bottom: 1px solid currentColor
+					transform: rotate(45deg)
+
+		&:hover
+			ul
+				opacity: 1
+				pointer-events: all
+
+		&:last-child
+			a
+				padding-right: 0
+
+		ul
+			position: absolute
+			top: calc(100% + 30px)
+			left: 0
+			background: #fff
+			opacity: 0
+			pointer-events: none
+
+			&:before
+				content: ''
+				position: absolute
+				top: -10px
+				left: 30px
+				size: 20px
+				transform: rotate(45deg)
+				background: #fff
+				z-index: -1
+
+			li
+
+				white-space: nowrap
+
+				&:not(:first-child)
+					border-top: 1px solid var(--second-color)
+
+				a
+					text-decoration: none
+					color: #000
+					font-size: rem(16)
+					padding: 16px 25px
+					display: inline-block
+
+				&:hover
+					background: #f4f6f9
+
+.mobile-menu
+	position: absolute
+	right: 0
+	top: 0
+	bottom: 0
+	background: #fff
+	width: 250px
+	transition: transform .3s ease
+	overflow-x: hidden
+	display: none
+	border-left: 1px solid var(--border-color)
+
+	.soc
+		padding: 15px 
+		margin: 0 0 -15px 0
+		border-top: 1px solid var(--border-color)
+
+		&__link
+			width: 30px
+			height: 30px
+			margin: 0 15px 15px 0
+
+	
+	.head-phone
+		margin-left: 0
+		display: flex 
+		flex-direction: column
+		align-items: flex-start
+
+		&:after 
+			content: ''
+			position: absolute
+			right: 15px
+			top: 18px
+			size: 6px
+			border-right: 1px solid #000
+			border-bottom: 1px solid #000
+			transform: rotate(45deg)
+			display: block
+
+		a
+			padding: 15px
+
+		.tel-selected
+			margin-right: 40px
+
+		.tel-selects-wr
+			opacity: 1
+			position: static
+			padding: 0
+			width: 100%
+			border: 0
+			pointer-events: all
+			display: none
+
+		.tel-selects
+			padding: 0
+			border: 0
+
+			&:before 
+				display: none
+
+			a 
+				padding: 15px
+				font-size: rem(16)
+				border-top: 1px solid var(--border-color)
+				background: none !important
+				line-height: 1
+				display: block
+
+
+
+
+	.head-address, .head-select
+		padding: 0
+		background: none !important
+
+		.head-select__select
+			opacity: 1
+			border-bottom: 1px solid var(--border-color)
+
+		select 
+			padding: 15px 40px
+			color: #000 !important
+			width: 100%
+			border: 0
+			background: url("../img/ico-location.png") no-repeat left 15px center !important
+			line-height: 1
+
+	.nav
+		&__list
+			flex-direction: column
+			align-items: flex-start
+
+		&__item 
+			position: static
+			width: 100%
+			border-bottom: 1px solid var(--border-color)
+
+			&.js__has-menu > a:after
+				right: 15px
+				transform: rotate(-45deg)
+
+			ul
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: initial
+				width: 250px
+				background: #fff
+				transform: translateX(100%)
+				transition: transform .3s ease
+				z-index: 99
+
+				li 
+					&:last-child 
+						border-bottom: 1px solid var(--border-color)
+
+				&:before 
+					display: none
+
+				a 
+					display: block
+					line-height: 1
+					padding: 15px
+
+
+
+		&__link
+			display: block
+			padding: 15px
+			text-align: left
+			line-height: 1
+
+.js__back
+	position: relative
+	padding: 15px 40px
+	line-height: 1
+
+	&:before 
+		content: ''
+		display: block
+		position: absolute
+		left: 15px
+		size: 6px
+		top: calc(50% - 3px)
+		border-top: 1px solid #000
+		border-left: 1px solid #000
+		transform: rotate(-45deg)
+
+#page-wr
+	transition: transform .3s ease
+
+.js__menu--open
+	#page-wr
+		transform: translateX(-250px)
+
+.js__submenu--open
+	.mobile-menu .nav__item ul
+		transform: translateX(0)
+
+@media screen and (max-width: 1200px)
+	.mobile-menu
+		display: block
+	
+
+	

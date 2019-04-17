@@ -1,0 +1,72 @@
+.catalog-one-v-4
+	.catalog
+		&-list
+			display: flex
+			flex-wrap: wrap
+			margin: 0 0 -15px 0
+
+		&-item
+			width: 100%
+			margin: 0 0 15px 0
+			transition: box-shadow .4s ease
+			border: 1px solid var(--border-color)
+			display: flex
+			align-items: center
+			padding: 24px 60px 24px 40px
+
+			&:hover
+				box-shadow: 0 0 50px 8px rgba(37, 41, 77, 0.05)
+
+				.btn-circle
+					background: var(--main-color)
+
+					&:before
+						filter: invert(1)
+
+			img
+				display: block
+
+			&__img
+				flex: none
+
+			&__info
+				border-top: 0
+				margin-left: 45px
+				margin-right: 40px
+
+			&__title
+				font-size: rem(18)
+				line-height: 26px
+
+			&__text
+				font-size: rem(14)
+				color: #b8becd
+				margin-top: 12px
+
+			&__btn
+				flex: none
+				margin-left: auto
+				align-self: center
+
+@media screen and (max-width: 660px)
+
+	.catalog-one-v-4
+		.catalog
+			&-list
+				margin: 0 0 -1.4rem 0
+			&-item
+				width: 100%
+				margin: 0 0 1.4rem 0
+				padding: 1.4rem
+				display: flex
+				flex-wrap: wrap
+
+				&__img
+					width: 100%
+
+				&__info
+					padding: 1.4rem 0 0 0
+					margin: 0
+
+				&__text
+					margin-top: 5px

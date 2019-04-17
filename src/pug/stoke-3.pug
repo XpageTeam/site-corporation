@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Акции v3
+		include inc/head.pug
+		include inc/css.pug
+	body.inner
+		.mobile-menu
+		#page-wr
+			include inc/header.pug
+			#content
+
+				.cart-cont
+					a(href="#").cart-small-cont
+						.cart-small(data-count="2")
+
+				.title-block__cont
+					.wrapper
+						.title-block
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#" title="Главная") Главная
+									span.bread-crumbs__this(href="#") Акции
+							.title-block__title
+								h1 Акции
+
+				.wrapper
+					.stoke__cont
+						.stoke-filter__cont
+							.stoke-filter
+								a(href="").stoke-filter__item.active Действущие
+								a(href="").stoke-filter__item Все
+
+						.stoke-v3
+							.stoke__list
+								a(href="#").stoke__item
+									.stoke__item-info
+										.stoke__item-info-title  Специальное предложение на оконные системы
+										.stoke__item-info-dop Бухгалтерский баланс — одна из основных форм бухгалтерской отчётности. В соответствии с...
+										.date до 01.06.2018
+										.stoke__item-info-btn
+								- for (var i = 0; i < 9; i++)
+									a(href="#").stoke__item
+										.stoke__item-info
+											.stoke__item-info-title  Специальное предложение на оконные системы
+											.stoke__item-info-dop Бухгалтерский баланс — одна из основных форм ...
+											.date.date--orange до 01.06.2018
+											.stoke__item-info-btn
+
+
+							include inc/paginator.pug
+
+
+
+
+
+			include inc/footer.pug
+		include inc/scripts.pug

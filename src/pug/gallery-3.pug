@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Галерея v3
+		include inc/head.pug
+		include inc/css.pug
+	body.inner
+		.mobile-menu
+		#page-wr
+			include inc/header.pug
+			#content
+
+				.cart-cont
+					a(href="#").cart-small-cont
+						.cart-small(data-count="2")
+
+				.title-block__cont
+					.wrapper
+						.title-block
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#" title="Главная") Главная
+									span.bread-crumbs__this(href="#") Галерея
+							.title-block__title
+								h1 Галерея
+
+				.wrapper
+					.gallery__cont
+						.gallery-v3
+							.gallery__list
+								- for (var i = 0; i < 9; i++)
+									a(href="#").gallery__item
+										figure.gallery__item-img
+											img(src="img/photos/stoke-v5.jpg")
+											.ico-info Каркасные дома
+										
+											
+									
+											
+										
+							include inc/paginator.pug
+
+
+
+
+
+			include inc/footer.pug
+		include inc/scripts.pug

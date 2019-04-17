@@ -1,0 +1,190 @@
+.main-slider
+	&__cont
+		position: relative
+		color: #fff
+
+	img
+		transform: scale(1)
+		display: block
+		object-fit: cover
+		transition: 8s ease
+		width: 100%
+
+	.js__active-slide
+		img
+			transform: scale(1.06)
+
+	.slider-info
+		text-align: center
+		margin-top: 65px
+
+	&-arrow
+		position: absolute
+		top: calc(50% - 21px)
+		left: 0
+		right: 0
+		z-index: 10
+
+		.wrapper
+			/* width: 100% */
+			display: flex
+			justify-content: space-between
+
+		.slick
+			&-arrow
+				size: 42px
+				display: block
+				background: #fff
+				border-radius: 50%
+				border: 0
+				font-size: 0
+				display: flex !important
+				flex-direction: column
+				align-items: center
+				justify-content: center
+				padding: 0 !important
+
+				&:before
+					content: ''
+					display: block
+					size: 6px
+					transform: rotate(45deg)
+					border-top: 1px solid #000
+					border-right: 1px solid #000
+
+			&-prev
+				transform: rotate(-180deg)
+
+
+	&__slide
+		position: relative
+		z-index: 2
+		display: block !important
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.62))
+			z-index: 1
+			pointer-events: none
+
+
+	&__slide-title-cont
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 9
+		display: flex
+		align-items: center
+		justify-content: center
+		flex: 1 1 auto
+		z-index: 1
+
+		> .wrapper
+			flex: 1 1 auto
+
+	&__slide
+		&-title
+			font-size: rem(45)
+			line-height: 50px
+			font-weight: bold
+			margin-bottom: 15px
+
+		&-btn
+			margin-top: 40px
+
+
+	.btn
+		&:nth-child(1)
+			background: transparent
+			border: 2px solid var(--main-color)
+			color: #fff
+			background: var(--main-color)
+		&:nth-child(2)
+			background: #fff
+			color: var(--main-color)
+
+		&:not(:first-child)
+			margin-left: 35px
+
+	.slick
+		&-dots
+			display: flex !important
+			position: absolute
+			bottom: 57px
+			left: 0
+			right: 0
+			width: 100%
+			max-width: 1140px
+			justify-content: center
+			margin: 0 auto
+
+			li
+				&:not(:first-child)
+					padding-left: 10px
+			.slick-active
+				button
+					background: var(--main-color)
+
+			button
+				font-size: 0
+				size: 14px
+				border-radius: 50%
+				border: 0
+				background: #fff
+
+		&-slide
+
+			&:not(:first-child)
+				display: none !important
+
+	&.slick-initialized
+		.slick-slide
+			display: block !important
+
+@media screen and (max-width: 1300px)
+
+	.main-slider__slide-title
+		font-size: 2.5rem
+		line-height: 41px
+
+@media screen and (max-width: 1200px)
+
+	.main-slider
+		.slick-dots
+			bottom: 20px
+
+		&__slide-title
+			font-size: 2.1rem
+			line-height: 37px
+
+
+@media screen and (max-width: 660px)
+
+	.main-slider
+		.slick-list
+			height: calc(100vh - 81px)
+
+
+@media screen and (max-width: 370px)
+
+	.main-slider__slide
+		&-title
+			font-size: 1.5rem
+			line-height: 27px
+
+		&-btn
+			margin-top: 25px
+
+	.main-slider 
+		.btn:not(:first-child)
+			margin-left: 15px
+
+
