@@ -105,6 +105,26 @@
 	border-left: 1px solid var(--border-color)
 	z-index: 0
 	overflow-y: auto
+	height: 100vh
+
+	.selectize
+		&-dropdown
+			width: 100% !important
+
+		&-input
+			padding: 0
+
+			.item
+				font-size: 16px
+				padding: 15px 20px 15px 15px
+
+		&-dropdown-content
+
+
+			.option
+				font-size: rem(16) !important
+				padding: 15px !important
+
 
 	.soc
 		padding: 15px 
@@ -259,7 +279,7 @@
 	.mobile-menu .nav__item ul
 		transform: translateX(0)
 
-@media screen and (min-width: 1000px)
+@media screen and (min-width: 1100px)
 	.nav__item 
 		ul
 			max-height: 170px
